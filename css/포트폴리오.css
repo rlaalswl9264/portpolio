@@ -1,0 +1,621 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Gmarket Sans TTF';
+    src: url('GmarketSansTTFLight.eot');
+    src: url('GmarketSansTTFLight.eot?#iefix') format('embedded-opentype'),
+        url('GmarketSansTTFLight.woff2') format('woff2'),
+        url('GmarketSansTTFLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gmarket Sans TTF';
+    src: url('GmarketSansTTFMedium.eot');
+    src: url('GmarketSansTTFMedium.eot?#iefix') format('embedded-opentype'),
+        url('GmarketSansTTFMedium.woff2') format('woff2'),
+        url('GmarketSansTTFMedium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gmarket Sans TTF';
+    src: url('GmarketSansTTFBold.eot');
+    src: url('GmarketSansTTFBold.eot?#iefix') format('embedded-opentype'),
+        url('GmarketSansTTFBold.woff2') format('woff2'),
+        url('GmarketSansTTFBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    color: #333;
+    line-height: 1;
+    font-family: 'Gmarket Sans TTF';
+    font-weight: 400;
+    background-image: url("../img/포폴-배경이미지-[Recovered].png");
+    background-repeat: no-repeat;
+}
+
+#loading {
+    height: 1110px;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    z-index: -9;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+
+#loading img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+header .inner {
+    width: calc(100% - 200px);
+    /* height: 100%; */
+    margin: 100px auto;
+    position: relative;
+}
+
+header .inner .cover {
+    height: 1080px;
+}
+
+header .inner .cover p {
+    color: #808080;
+    line-height: 1.3;
+}
+
+header .inner .cover h2 {
+    font-size: 70px;
+    /*  transform: rotate(90deg); */
+    writing-mode: vertical-rl;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+header .inner .cover .main_bt {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 735px;
+}
+
+/* header .inner .pc {
+    position: fixed;
+} */
+
+header .inner .pc .gnb {
+    display: none;
+}
+
+header.on .inner .pc .gnb {
+    display: flex;
+    justify-content: flex-end;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    background-color: #ffffffbb;
+    width: 100%;
+    height: 80px;
+    align-items: center;
+    transition: top 0.3s, background-color 0.5s;
+}
+
+header.on .inner .pc .gnb li.in {
+    color: #F700BA;
+}
+
+header .inner .pc .gnb li {
+    margin-right: 50px;
+}
+
+header .inner .profile {
+    display: flex;
+}
+
+header .inner h3#title {
+    font-size: 40px;
+    color: #F700BA;
+    margin: 60px 0;
+}
+header .inner i {
+    display: block;
+    text-align: end;
+    color:#F700BA;
+    font-size: 15px;
+    margin: 20px;
+}
+header .inner .profile .pf_img {
+    width: 100%;
+    height: 100%;
+    line-height: 1.4;
+    text-align: center;
+}
+
+header .inner .profile .pf_img b {
+    font-size: 20px;
+}
+
+header .inner .profile .pf_img img {
+    display: block;
+    margin-bottom: 20px;
+}
+
+header .inner .profile .pf_img span {
+    color: #F700BA;
+}
+
+header .inner .profile div h3 {
+    margin-bottom: 80px;
+}
+
+header .inner .profile strong {
+    font-size: 25px;
+    position: relative;
+}
+
+header .inner .profile strong::before {
+    content: '';
+    position: absolute;
+    background-color: #F700BA;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+}
+
+header .inner .profile .middle {
+    margin-top: 160px;
+    margin-left: 150px;
+}
+
+header .inner .profile .right {
+    margin-top: 150px;
+    margin-left: 140px;
+}
+
+header .inner .profile .middle .MyProfile ul,
+header .inner .profile .middle .Education ul,
+header .inner .profile .right .Personarity ul,
+header .inner .profile .right .Skills ul {
+    margin: 40px 0;
+}
+
+header .inner .profile .middle .MyProfile ul li,
+header .inner .profile .middle .Education ul li,
+header .inner .profile .right .Personarity ul li,
+header .inner .profile .right .Skills ul li {
+    margin: 20px 0;
+}
+
+header .inner .profile .middle .Education ul li {
+    font-size: 20px;
+}
+
+header .inner .profile .middle .MyProfile ul li p {
+    font-size: 20px;
+}
+
+header .inner .profile .middle .MyProfile ul li b {
+    margin-right: 10px;
+    font-weight: 400;
+}
+
+header .inner .profile .right .Personarity ul li {
+    font-size: 20px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    line-height: 130px;
+    text-align: center;
+}
+
+header .inner .profile .right .Personarity ul {
+    display: flex;
+}
+
+header .inner .profile .right .Personarity ul li:first-child {
+    background-color: #F2F2F2;
+}
+
+header .inner .profile .right .Personarity ul li:nth-child(2) {
+    background-color: #E6E6E6;
+    margin-left: -20px;
+}
+
+header .inner .profile .right .Personarity ul li:nth-child(3) {
+    background-color: #CCCCCC;
+    margin-left: -20px;
+}
+
+.container {
+    margin: 10px auto;
+    width: 500px;
+    text-align: center;
+}
+
+.progress {
+    background: #666666;
+}
+
+.progress-bar,
+.progress-bar2,
+.progress-bar3 {
+    height: 15px;
+    width: 0;
+    transition: 0.2s linear;
+    transition-property: width, background-color;
+
+}
+
+.progress-striped .bar.on.progress-bar {
+    background-color: #F700BA;
+    width: 70%;
+    animation: progressAnimationStrike 3s;
+}
+
+.progress-striped .bar.on.progress-bar2 {
+    background-color: #F700BA;
+    width: 75%;
+    animation: progressAnimationStrike2 3s;
+}
+
+.progress-striped .bar.on.progress-bar3 {
+    background-color: #F700BA;
+    width: 60%;
+    animation: progressAnimationStrike3 3s;
+}
+
+.progress-striped .progress-bar,
+.progress-striped .progress-bar2,
+.progress-striped .progress-bar3 {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* .progress-striped .bar.on.progress-bar,
+.progress-striped .bar.on.progress-bar2,
+.progress-striped .bar.on.progress-bar3 {
+    opacity: 1;
+    transition: 0.7s;
+    transform: translateX();
+
+} */
+
+@keyframes progressAnimationStrike {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 70%;
+    }
+}
+
+@keyframes progressAnimationStrike2 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 75%;
+    }
+}
+
+@keyframes progressAnimationStrike3 {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 60%;
+    }
+}
+
+.Project .inner {
+    width: calc(100% - 200px);
+    margin: 150px auto;
+}
+
+.Project .inner .all {
+    display: flex;
+    justify-content: space-between;
+}
+
+.Project .inner .other {
+    display: flex;
+    justify-content: space-between;
+    margin: 250px;
+}
+
+.Project .inner .all .left,
+.Project .inner .other .left {
+    position: relative;
+}
+
+.Project .inner .all .left figure {
+    width: 682px;
+    height: 575px;
+    background: url('../img/Untitled-1.png') 0 0 / 100% 100% no-repeat;
+    overflow: hidden;
+}
+
+.Project .inner .other .left figure {
+    width: 243px;
+    height: 505px;
+    background: url('../img/모바일-목업.png') 0 0 / 100% 100% no-repeat;
+    overflow: hidden;
+}
+
+.Project .inner .all .left>figure {
+    position: sticky;
+    top: 150px;
+    left: 0;
+}
+
+.Project .inner .other .left>figure {
+    position: sticky;
+    top: 150px;
+    left: 150px;
+}
+.Project .inner .all .left>figure:hover::before,
+.Project .inner .all .left>figure:hover p::before {
+    display: none;
+}
+.Project .inner .all .left figure p:hover img {
+    animation: enexScroll 10s ease infinite;
+}
+@keyframes enexScroll {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-90%);
+    }
+}
+
+.Project .inner .all .left figure p::before {
+    content: '';
+    background: url('../img/icons8-mouse-windows-11/icons8-mouse-64.png');
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 30%;
+    left: 42%;
+    transform: translate(50%);
+}
+
+
+
+.Project .inner .all .left figure p img {
+    position: relative;
+    width: 100%;
+    z-index: -2;
+    top: 16px;
+    left: 17px;
+}
+
+.Project .inner .other .left figure p {
+    width: 228px;
+    height: 495px;
+    overflow: hidden;
+    position: absolute;
+    top: 10px;
+    left: 8px;
+    border-radius: 26px;
+}
+
+.Project .inner .other .left figure p img {
+    width: 100%;
+    /* position: relative;
+    top: 10px;
+    left: 8px; */
+}
+
+.Project .inner .all .left figure::before {
+    content: '';
+    position: absolute;
+    width: 648px;
+    height: 368px;
+    background-color: #0000002a;
+    top: 16px;
+    left: 17px;
+    z-index: 999;
+}
+
+.Project .inner .all .left figure p {
+    width: 665px;
+    height: 382px;
+    overflow: hidden;
+}
+
+.Project .inner .all .list {
+    width: calc(100% - 50%);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+
+}
+
+.Project .inner .other .list {
+    width: calc(100% - 40%)
+}
+
+.Project .inner .all .list .item,
+.Project .inner .other .list .item {
+    width: calc(100% / 2 - 30px);
+    margin-bottom: 100px;
+    border-bottom: 1px solid #000;
+}
+
+
+.Project .inner .all .list .item:last-child,
+.Project .inner .other .list .item:last-child {
+    border-bottom: none;
+}
+
+.Project .inner .all .list .item figure img:hover,
+.Project .inner .other .list .item figure img:hover {
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+
+.Project .inner .all .list .item figure,
+.Project .inner .other .list .item figure {
+    text-align: center;
+  
+}
+.Project .inner .all .list .item:nth-child(2n) {
+    margin-top: 150px;
+}
+
+.Project .inner .all .list .item:nth-child(2n) nav {
+    margin-bottom: 150px;
+}
+
+.Project .inner .other .list .item nav {
+    margin-bottom: 150px;
+}
+
+
+.Project .inner .all .list .item:nth-child(2n) nav li:last-child,
+.Project .inner .other .list .item:nth-child(2n) nav li:last-child {
+    margin-bottom: 50px;
+}
+
+.Project .inner .all .list .item .info,
+.Project .inner .other .list .item .info {
+    font-size: 20px;
+    margin-top: 100px;
+}
+
+.Project .inner .all .list .item .info ul p,
+.Project .inner .other .list .item .info ul p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.Project .inner .all .list .item .info ul li,
+.Project .inner .other .list .item .info ul li {
+    position: relative;
+    margin: 15px 0;
+}
+
+.Project .inner .all .list .item .info ul li::before,
+.Project .inner .other .list .item .info ul li::before {
+    content: '';
+    position: absolute;
+    background-color: #000;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    top: 50%;
+    left: -25px;
+    transform: translateY(-50%);
+}
+
+.Project .inner .all .list .item .info nav,
+.Project .inner .other .list .item .info nav {
+    margin-top: 30px;
+}
+
+.Project .inner .all .list .item .info nav li:hover,
+.Project .inner .other .list .item .info nav li:hover {
+    background: url('../img/호버그라데이션.png') center center / cover no-repeat;
+}
+
+.Project .inner .all .list .item .info nav li,
+.Project .inner .other .list .item .info nav li {
+    border: 1px solid #000;
+    text-align: center;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+/* .Project .inner .all .list .item .info nav li > last-child {
+    border-bottom: 1px solid #000;
+} */
+.Graphic .inner .g_list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Graphic .inner .g_list .g_item {
+    width: calc(100% / 5 - 15px);
+    display: flex;
+}
+
+.Graphic .inner .g_list .g_item li {
+    margin-right: 15px;
+}
+
+.Graphic .inner .g_list .g_item li a {
+    width: 300px;
+    height: 350px;
+    display: block;
+}
+
+.Graphic .inner .g_list .g_item li a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Graphic .inner .g_list .g_item li p {
+    margin-top: 10px;
+    text-align: center;
+    color: #958E8E;
+    font-size: 18px;
+}
+
+.footer {
+    text-align: center;
+    line-height: 1.5;
+}
+/* .carouselTicker__list {
+    margin: 10px 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+.carouselTicker__item {
+    width: 100px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+} */
