@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이케아</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="css/이케아.css" rel="stylesheet" />
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        $(function () {
+            //swiper script
+            var swiper = new Swiper(".cont02", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                slidesPerView: 3,
+                spaceBetween: 30,
+            });
+
+            //swiper script
+            var swiper = new Swiper(".event", {
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                slidesPerView: 2,
+                spaceBetween: 30,
+                breakpoints: {
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 20,
+                    },
+                    768: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    1024: {
+                        slidesPerView: 3,
+                        spaceBetween: 50,
+                    },
+                },
+            });
+
+
+
+        })
+        window.onload = function () {
+            let icon = document.getElementsByClassName('icon')[0];
+            let iconimg = icon.getElementsByTagName('div');
+
+            window.onscroll = function () {
+                let scrollBar = window.scrollY;
+                console.log(icon.offsetTop)
+                console.log(scrollBar)
+                for (let i = 0; i < iconimg.length; i++) {
+                    if (icon.offsetTop / 2 < scrollBar) {
+                        iconimg[i].classList.add('on' + i);
+                    } else {
+                        iconimg[i].classList.remove('on' + i);
+                    }
+                }
+            }
+
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="#"><img src="img/이케아 로고.svg"></a>
+            </h1>
+            <div class="search">
+                <input type="text" placeholder="검색어 입력" />
+                <img src="img/🦆 icon _search_.png" />
+            </div><!-- .search end -->
+            <nav>
+                <li><a href="#"><img src="img/🦆 icon _heart_.png" /></a></li>
+                <li><a href="#"><img src="img/🦆 icon _user_.png" /></a></li>
+                <li><a href="#"><img src="img/🦆 icon _menu_.png" /></a></li>
+            </nav>
+        </div><!-- .inner end -->
+    </header>
+    <section class="cont01">
+        <div class="in">
+            <div class="text">
+                <h2>즐거운 놀이터, 우리집</h2>
+                <p_on>4월 20일 ~ 5월 9일</p_on>
+                <span>아이들의 더 신나는 하루를 위해<br />
+                    <b>인기 어린이 제품 15% 할인 혜택</b>과<br />
+                    다양한 이벤트를 준비했어요.</span>
+                <div>
+                    <p>View More</p>
+                    <img src="img/Group 24.png" />
+                </div>
+            </div><!-- .text end -->
+        </div><!-- .in end -->
+        <div class="button">
+            <div>
+                <a href="#"><img src="img/🦆 icon _phone_.png" /></a>
+                <p>헤이오더</p>
+            </div>
+            <div>
+                <a href="#"><img src="img/🦆 icon _box iso_.png" /> </a></li>
+                <p>우편번호</p>
+            </div>
+            <div>
+                <a href="#"><img src="img/🦆 icon _home alt slim horiz_.png" /> </a></li>
+                <p>매장선택</p>
+            </div>
+        </div><!-- .button end -->
+    </section><!-- .cont01 end -->
+
+    <ul class="icon">
+        <div>
+            <li><a href="#"><img src="img/🦆 icon _delivery truck_.png" /></a></li>
+            <p>배송 서비스</p>
+        </div>
+        <div>
+            <li><a href="#"><img src="img/🦆 icon _open select hand gesture_.png" /></a></li>
+            <p>클릭 앤 콜렉트 주유소 <br />
+                픽업 서비스</p>
+        </div>
+        <div>
+            <li><a href="#"><img src="img/🦆 icon _tools_.png" /></a></li>
+            <p>조립/설치 서비스</p>
+        </div>
+        <div>
+            <li><a href="#"><img src="img/🦆 icon _apple imac 2021_.png" /></a></li>
+            <p>인테리어 디자인<br />
+                & 구매 상담 서비스</p>
+        </div>
+        <div>
+            <li><a href="#"><img src="img/🦆 icon _doc search_.png" /></a></li>
+            <p>질문과 답변</p>
+        </div>
+    </ul>
+
+
+
+    <!-- Swiper -->
+    <section class="best">
+        <div class="swiper cont02">
+            <h2><span>베스트</span> 카테고리 쇼핑하기</h2>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/image 3.png" />
+                    <h4>침실</h4>
+                </div><!-- .swiper-wrapper end 1-->
+
+                <div class="swiper-slide">
+                    <img src="img/image 4.png" />
+                    <h4>수납/정리</h4>
+                </div><!-- .swiper-wrapper end 2-->
+
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/image 5.png" /></a>
+                    <h4>홈오피스</h4>
+                </div><!-- .swiper-wrapper end 3-->
+
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/image 6 (1).png" /></a>
+                    <h4>다이닝</h4>
+                </div><!-- .swiper-wrapper end 4-->
+
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/image 26.png" /></a>
+                    <h4>거실</h4>
+                </div><!-- .swiper-wrapper end 5-->
+
+                <div class="swiper-slide">
+                    <a href="#"><img src="img/image 27.png" /></a>
+                    <h4>주방</h4>
+                </div><!-- .swiper-wrapper end 6-->
+
+            </div>
+
+        </div><!-- .cont02 end -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </section><!-- .best end -->
+
+    <section class="cont03">
+        <div class="top">
+            <h2><span>#이케아</span>로 꾸민 우리집</h2>
+            <div>
+                <a href="#">
+                    <p>전체보기</p>
+                    <img src="img/Group 24.png" />
+                </a>
+            </div>
+        </div><!-- .top end -->
+        <div class="insta">
+            <div class="left">
+                <P>@_.stayyoung._</P>
+                <img src="img/image 12.png" />
+            </div><!-- .left end -->
+            <div class="right">
+                <div class="item">
+                    <figure>
+                        <img src="img/Rectangle 8.png" />
+                    </figure>
+                    <div>
+                        <h4>BILLY 빌리</h4>
+                        <p>책장, 80x28x202 cm</p>
+                        <b>￦ 89,900</b>
+                    </div>
+                </div><!-- item end 1 -->
+                <div class="item">
+                    <figure>
+                        <img src="img/image 8.png" />
+                    </figure>
+                    <div>
+                        <h4>LOBERGET 로베리에트 / SIBBEN 시벤</h4>
+                        <p>어린이책상의자</p>
+                        <b>￦ 25,000</b>
+                    </div>
+                </div><!-- item end 2 -->
+                <div class="item">
+                    <figure>
+                        <img src="img/image 9.png" />
+                    </figure>
+                    <div>
+                        <h4>MELLTORP 멜토르프</h4>
+                        <p>테이블, 75x75 cm</p>
+                        <b>￦ 69,900</b>
+                    </div>
+                </div><!-- item end 3 -->
+            </div><!-- .right end -->
+        </div><!-- .insta end 1-->
+
+        <div class="insta">
+            <div class="left">
+                <p>@julius.mmt</P>
+                <img src="img/Mask group.jpg" />
+            </div><!-- .left end -->
+            <div class="right right_bottom">
+                <div class="item">
+                    <figure>
+                        <img src="img/Rectangle 8.jpg" />
+                    </figure>
+                    <div>
+                        <h4>SÖDERHAMN 쇠데르함</h4>
+                        <p>1인용섹션</p>
+                        <b>￦ 430,000</b>
+                    </div>
+                </div><!-- item end 1 -->
+                <div class="item">
+                    <figure>
+                        <img src="img/Rectangle 8-1.jpg" />
+                    </figure>
+                    <div>
+                        <h4>EDSBRUK 에스브루크</h4>
+                        <p>액자, 50x70 cm</p>
+                        <b>￦ 27,900</b>
+                    </div>
+                </div><!-- item end 2 -->
+            </div><!-- .right right_bottom end -->
+        </div><!-- .insta end 2-->
+    </section><!-- .cont03 end -->
+
+    <section class="cont04">
+        <div class="swiper event">
+            <h2>진행 중인 <span>이벤트 및 프로모션</span></h2>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/image 19.jpg" />
+                    </figure>
+                    <div>
+                        <b>IKEA와 함게하는 새 출발</b>
+                    </div>
+                </div><!-- .swiper-wrapper end 1-->
+
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/image 20.jpg" />
+                    </figure>
+                    <div>
+                        <b>쾌적한 베란다에서 즐기는 봄의 여유</b>
+                    </div>
+                </div><!-- .swiper-wrapper end 2-->
+
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/image 21.jpg" />
+                    </figure>
+                    <div>
+                        <b>부모님의 거실을 북유럽풍으로</b>
+                    </div>
+                </div><!-- .swiper-wrapper end 3-->
+
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/image 31.png" />
+                    </figure>
+                    <div>
+                        <b>IKEA에서 만나는 캠핑 필수 준비물</b>
+                    </div>
+                </div><!-- .swiper-wrapper end 4-->
+
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="img/image 30.png" />
+                    </figure>
+                    <div>
+                        <b>특별한 가격으로 즐기는 든든한 한 끼 식사</b>
+                    </div>
+                </div><!-- .swiper-wrapper end 5-->
+            </div>
+
+        </div><!-- .event end -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </section><!-- .cont04 end -->
+    <footer>
+        <div class="all">
+            <div class="up">
+                <div class="left">
+                    <p>개인정보처리방침</p>
+                    <p>쿠키 정책</p>
+                    <p>쿠키 설정</p>
+                    <p>웹사이트 이용약관</p>
+                    <p>Responsible disclosure</p>
+                </div><!-- .left end -->
+                <div class="right">
+                    <div class="country">
+                        <img src="img/🦆 icon _language_.png" />
+                        <p>국가 변경</p>
+                    </div><!-- .country end -->
+                    <div class="lang">
+                        <p>한국어</p>
+                        <img src="img/🦆 icon _nav arrow down_.png" />
+                    </div>
+                </div><!-- .right end -->
+            </div><!-- .up end -->
+            <p>© Inter IKEA Systems B.V 1999-2023</p>
+            <div class="down">
+                <p>IKEA 코리아</p>
+                <p>주소 : (우) 14352 경기도 광명시 일직로 17 IKEA광명점</p>
+                <p>사업자 등록번호 : 106-86-82871 사업자정보확인</p>
+                <p>대표자 : 프레드릭 요한손</p>
+                <p>통신판매업 신고 : 2018-경기광명-0209</p>
+                <p>TEL : 1670-4532</p>
+            </div><!-- .down end -->
+            <ul class="icon_img">
+                <li><a href="#"><img src="img/🦆 icon _facebook squared_.png" /></a></li>
+                <li><a href="#"><img src="img/🦆 icon _instagram_.png" /></a></li>
+                <li><a href="#"><img src="img/🦆 icon _comment_.png" /></a></li>
+                <li><a href="#"><img src="img/🦆 icon _youtube_.png" /></a></li>
+            </ul>
+        </div><!-- .all end -->
+    </footer>
+</body>
+
+</html>

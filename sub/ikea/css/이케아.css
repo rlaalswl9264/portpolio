@@ -1,0 +1,906 @@
+@charset "utf-8";
+
+/*
+Copyright (c) 2021 Kil Hyung-jin, with Reserved Font Name Pretendard.
+https://github.com/orioncactus/pretendard
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http://scripts.sil.org/OFL
+*/
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 900;
+    font-display: swap;
+    src: local('Pretendard Black'),
+        url('font/woff2/Pretendard-Black.woff2') format('woff2'),
+        url('font/woff/Pretendard-Black.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 800;
+    font-display: swap;
+    src: local('Pretendard ExtraBold'),
+        url('font/woff2/Pretendard-ExtraBold.woff2') format('woff2'), url('font/woff/Pretendard-ExtraBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 700;
+    font-display: swap;
+    src: local('Pretendard Bold'), url('font/woff2/Pretendard-Bold.woff2') format('woff2'),
+        url('font/woff/Pretendard-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 600;
+    font-display: swap;
+    src: local('Pretendard SemiBold'), url('font/woff2/Pretendard-SemiBold.woff2') format('woff2'), url('font/woff/Pretendard-SemiBold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 500;
+    font-display: swap;
+    src: local('Pretendard Medium'), url('font/woff2/Pretendard-Medium.woff2') format('woff2'),
+        url('font/woff/Pretendard-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 400;
+    font-display: swap;
+    src: local('Pretendard Regular'), url('font/woff2/Pretendard-Regular.woff2') format('woff2'),
+        url('font/woff/Pretendard-Regular.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 300;
+    font-display: swap;
+    src: local('Pretendard Light'), url('font/woff2/Pretendard-Light.woff2') format('woff2'),
+        url('font/woff/Pretendard-Light.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 200;
+    font-display: swap;
+    src: local('Pretendard ExtraLight'), url('font/woff2/Pretendard-ExtraLight.woff2') format('woff2'), url('font/woff/Pretendard-ExtraLight.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    font-weight: 100;
+    font-display: swap;
+    src: local('Pretendard Thin'), url('font/woff2/Pretendard-Thin.woff2') format('woff2'),
+        url('font/woff/Pretendard-Thin.woff') format('woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+    font-family: 'Pretendard';
+    font-weight: 400;
+}
+
+header {
+    display: flex;
+    height: 100px;
+}
+
+header .inner {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+header .inner .search {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+header .inner .search img {
+    width: 2.5rem;
+    height: 2.5rem;
+    position: absolute;
+    top: 30px;
+    left: 500px;
+}
+
+/* 고정하는거는 픽셀로 */
+
+header .inner .search input[type="text"] {
+    border: 0;
+    border-bottom: 3px solid #333;
+    padding-bottom: 11px;
+    width: 46rem;
+    font-size: 18px;
+    color: #8D8D8D;
+    padding-left: 19px;
+
+}
+
+header .inner nav {
+    display: flex;
+    align-items: center;
+}
+
+header .inner nav img {
+    width: 30px;
+}
+
+header .inner nav li {
+    margin-left: 3.4rem;
+}
+
+.cont01 {
+    height: 800px;
+    width: 100%;
+    position: relative;
+    background-image: url("../img/image 2.jpg");
+    background-size: cover;
+    background-position: 0 0;
+
+}
+
+.cont01>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont01 .in {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #e8e4e4dd;
+    opacity: 100%;
+    height: 100%;
+    width: 40%;
+}
+
+.cont01 .text {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+}
+
+.cont01 .text h2 {
+    font-size: 5rem;
+}
+
+.cont01 .text p_on {
+    font-size: 2rem;
+    margin: 45px 0 103px 0;
+    position: relative;
+    display: inline-block;
+    padding: 0 8px;
+
+}
+
+.cont01 .text p_on::before {
+    content: '';
+    width: 100%;
+    height: 10px;
+    background-color: #FBD914;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.cont01 .text span {
+    font-size: 3rem;
+    line-height: 1.3;
+    display: block;
+}
+
+.cont01 .text div {
+    display: flex;
+    margin-top: 10.1rem;
+
+}
+
+.cont01 .text div p {
+    font-size: 18px;
+    margin-right: 1.2rem;
+}
+
+.cont01 .button {
+    position: fixed;
+    bottom: 20%;
+    right: 5.5rem;
+    z-index: 99;
+
+}
+
+.cont01 .button div {
+    width: 70px;
+    height: 70px;
+    background-color: #0058AB;
+    border-radius: 50%;
+    text-align: center;
+    margin-bottom: 5px;
+    border: 1px solid #fff;
+}
+
+.cont01 .button a {
+    display: block;
+    margin-bottom: 5px;
+    padding-top: 13px;
+}
+
+.cont01 .button p {
+    color: #fff;
+    font-size: 14px;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*  margin: 4rem 0 16.8rem; */
+    text-align: center;
+    /* 글씨길이가 길어서 이미지와 글이 중앙에 배치안될때
+    두개의 부모한테  text-align: center;*/
+}
+
+.icon div {
+    width: 100%;
+    transform: translateY(100px);
+    opacity: 0;
+}
+
+/* 여백을 줄때 한쪽으로만 주지말고
+양쪽으로 주거나 width값으로만 잡아야 반응하기 쉽다 */
+
+.icon div.on0 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.icon div.on1 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 0.8s;
+}
+
+.icon div.on2 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 1.5s;
+}
+
+.icon div.on3 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 2s;
+}
+
+.icon div.on4 {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.5s 2.5s;
+}
+
+.icon div p {
+    text-align: center;
+    line-height: 1.3;
+    margin-top: 2rem;
+    font-size: 1.6rem;
+    word-break: keep-all;
+}
+
+.best {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    margin: 15rem auto;
+    position: relative;
+}
+
+.cont02,
+.cont03,
+.cont04,
+.all,
+.icon {
+    max-width: 1440px;
+    width: calc(100% - 40px);
+    margin: 15rem auto;
+
+}
+
+.cont02 h2,
+.cont03 h2,
+.cont04 h2 {
+    font-size: 4rem;
+    margin-bottom: 4.2rem;
+}
+
+.cont02 span,
+.cont03 span,
+.cont04 span {
+    color: #0058AB;
+}
+
+.cont02 .swiper-slide {
+    border: 1px solid #C8C6C6;
+}
+
+.cont02 .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont02 .top {
+    padding: 0 8px;
+    position: relative;
+}
+
+.cont02 .swiper-slide h4 {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 500;
+    margin: 2rem 0;
+}
+
+.best .swiper-button-next {
+    position: absolute;
+    bottom: 0;
+    right: -40px;
+    transform: translateX(-50%);
+}
+
+.best .swiper-button-prev {
+    left: -20px;
+}
+
+/* 이미 next버튼에 포지션 잡혀있어서 두번안잡아도 됨*/
+.cont02 .list .item h4 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.cont02 h2 span {
+    position: relative;
+    padding: 0 5px;
+}
+
+.cont02 h2 span::before {
+    content: '';
+    width: 100%;
+    height: 13px;
+    background-color: #FBD914;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.cont03 .top h2 span {
+    position: relative;
+    padding: 0 5px;
+}
+
+.cont03 h2 span::before {
+    content: '';
+    width: 100%;
+    height: 1.3rem;
+    background-color: #FBD914;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.cont03 .top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont03 .top div a {
+    display: flex;
+}
+
+.cont03 .top div a p {
+    font-size: 1.8rem;
+    margin-right: 1.6rem;
+}
+
+.cont03 .insta {
+    display: flex;
+    margin-bottom: 15rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cont03 .insta .left p {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.cont03 .insta .left img {
+    width: 100%;
+}
+
+/* .cont03 .insta .left img:hover {
+    
+    transform: scale(1.1);
+    transition: 1.5s;
+} */
+.cont03 .insta:nth-child(3) .left p {
+    text-align: right;
+}
+
+/* insta는 두개지만 cont03 밑에 자식들 순서로 세번째라서 :nth-child(3)  */
+
+.cont03 .insta .left {
+    width: 65%;
+}
+
+.cont03 .insta .right {
+    width: 30%;
+    height: 100%;
+}
+
+.cont03 .insta .right .item {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 3.2rem 0;
+}
+
+.cont03 .insta .right .item::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    border: 1px solid #C8C6C6;
+    left: 0;
+    bottom: 0;
+}
+
+.cont03 .insta .right .item:last-child:before {
+    border: 0;
+}
+
+/* 아이템들중 마지막 가상선택자 선을 없앨려면
+가상선택자에 last child X
+item에다가 줘야함 */
+
+.cont03 .insta .right .item figure {
+
+    width: 12rem;
+    height: 12rem;
+}
+
+.cont03 .insta .right .item figure img {
+    width: 100%;
+}
+
+.cont03 .insta .right .item div {
+    margin-left: 5.7rem;
+    font-size: 2rem;
+}
+
+.cont03 .insta .right .item div p {
+    margin: 5px 0 33px;
+}
+
+.cont03 .insta .right .item div b {
+    font-size: 2.5rem;
+}
+
+/* .cont03 .insta .right .item::before:last-child {
+    border: 0;
+} */
+
+.cont03 .insta .right_bottom {
+    order: -1;
+    margin-right: 12.1rem;
+
+}
+
+.cont04 h2 span {
+    position: relative;
+    padding: 0 5px;
+}
+
+.cont04 h2 span::before {
+    content: '';
+    width: 100%;
+    height: 13px;
+    background-color: #FBD914;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+}
+
+.cont04 {
+    position: relative;
+}
+
+.cont04 .button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.cont04 .event .swiper-wrapper .swiper-slide {
+    text-align: center;
+    margin-bottom: 25px;
+    box-shadow: 8px 8px 10px #C8C6C6;
+}
+
+/* 그림자 x축 y축 번짐 그림자색 */
+
+/* .cont04 .event .swiper-wrapper .swiper-slide figure {
+    height: 43.5rem;
+} */
+
+.cont04 .event .swiper-wrapper .swiper-slide figure img {
+    width: 100%;
+}
+
+/* 큰이미지에만 object cover, 화이트값잡기 */
+.cont04 .event .swiper-wrapper .swiper-slide div {
+    height: 78px;
+    background-color: #F5F5F5;
+    line-height: 78px;
+
+}
+
+.cont04 .event .swiper-wrapper .swiper-slide b {
+    font-size: 25px;
+
+}
+
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    left: -50px;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+    right: -50px;
+}
+
+footer {
+    height: 380px;
+    background-color: #0058AB;
+    line-height: 1.3;
+}
+
+footer p {
+    color: #fff;
+    font-size: 14px;
+}
+
+footer .up {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+
+footer .up .left {
+    display: flex;
+}
+
+footer .up .left p {
+    margin-right: 25px;
+    margin-bottom: 39px;
+}
+
+footer .up .right {
+    display: flex;
+}
+
+footer .up .right .country {
+    display: flex;
+    border: 1px solid #fff;
+    border-radius: 50px;
+    padding: 7px 11px;
+    height: 31px;
+    text-align: center;
+    align-items: center;
+}
+
+footer .up .right .country img {
+    width: 13px;
+    height: 13px;
+    margin-right: 14px;
+    line-height: 13px;
+}
+
+footer .up .right .lang {
+    display: flex;
+    border: 1px solid #fff;
+    margin-left: 10px;
+    height: 31px;
+    padding: 7px 14px;
+    border-radius: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+footer .up .right .lang img {
+    width: 12px;
+    height: 6px;
+    line-height: 6px;
+    margin-left: 25px;
+}
+
+footer .down {
+    margin-top: 32px;
+}
+
+footer .icon_img {
+    display: flex;
+    align-items: center;
+    margin-top: 31px;
+}
+
+footer .icon_img img {
+    width: 20px;
+    margin-right: 25px;
+}
+
+@media all and (max-width:960px) {
+
+    header .inner .search input[type="text"] {
+        font-size: 14px;
+        width: 40rem;
+    }
+
+    html {
+        font-size: 50%;
+    }
+
+    .cont01 .in {
+        width: 60%;
+    }
+
+    .cont01 .button {
+        z-index: 99;
+    }
+
+    .cont01 .button div {
+        width: 60px;
+        height: 60px;
+    }
+
+    .cont01 .button div p {
+        font-size: 12px;
+    }
+
+    .cont02 h2,
+    .cont03 h2,
+    .cont04 h2 {
+        font-size: 30px;
+    }
+
+    .cont03 .insta:nth-child(2) .left img {
+        width: 100%;
+    }
+
+    .cont03 .insta:nth-child(3) .left img {
+        width: 100%;
+    }
+
+    .cont04 .event .swiper-wrapper .swiper-slide b {
+        font-size: 17px;
+    }
+
+    .cont04 .event .swiper-wrapper .swiper-slide {
+        width: calc(100% / 3 - 40px);
+    }
+
+    .swiper-button-next:after,
+    .swiper-rtl .swiper-button-prev:after {
+        position: absolute;
+        right: 60px;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-rtl .swiper-button-next:after {
+        position: absolute;
+        left: 60px;
+    }
+}
+
+@media all and (max-width:700px) {
+    .cont03 .insta {
+        flex-wrap: wrap;
+        height: 100%;
+    }
+
+    .cont03 .insta .right {
+        width: 48%;
+    }
+
+    .cont03 .insta .left {
+        width: 50%;
+    }
+
+}
+
+@media all and (max-width:414px) {
+    header .inner h1 img {
+        width: 52px;
+        height: 25px;
+    }
+
+    header .inner .search input[type="text"] {
+        font-size: 10px;
+        width: 12.3rem;
+    }
+
+    .cont01 {
+        height: 600px;
+    }
+
+    .cont01 .in {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        top: auto;
+        text-align: center;
+    }
+
+    .cont01 .text {
+        width: 100%;
+        left: 0;
+        transform: translate(0, -50%);
+    }
+
+    .cont01 .text div {
+        margin-top: 0;
+    }
+
+    .cont01 .text p,
+    .cont01 .text span,
+    .cont01 .text div img {
+        display: none;
+    }
+
+    .cont01 .text h2 {
+        font-size: 18px;
+    }
+
+    .cont01 .text p_on {
+        font-size: 13px;
+        margin: 7px 12px;
+    }
+
+    header .inner .search img {
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        left: 200px;
+        top: 37px;
+    }
+
+    .cont02 h2,
+    .cont03 h2,
+    .cont04 h2 {
+        font-size: 22.5px;
+    }
+
+    header .inner nav li {
+        margin-left: 11px;
+    }
+
+    header .inner nav img {
+        width: 15px;
+    }
+
+    header .inner .search input[type="text"] {
+        width: 123px;
+        border-bottom: 1px solid #333;
+        margin-right: 54px;
+    }
+
+    .icon {
+        flex-wrap: wrap;
+        height: 200px;
+    }
+
+    .icon div {
+        width: 32%;
+    }
+
+    .icon div img {
+        width: 35px;
+    }
+
+    .cont02 .swiper-slide {
+        border: 0;
+    }
+
+    .cont02 .swiper-slide img {
+        width: 117px;
+    }
+
+    .cont02 .swiper-slide h4 {
+        text-align: center;
+        width: 117px;
+        font-size: 18px;
+        border: 1px solid #C8C6C6;
+        margin: 0;
+        padding: 5px 0;
+    }
+
+    .cont03 .insta {
+        display: block;
+    }
+
+    .cont03 .insta .right {
+        margin: 0;
+    }
+
+    .cont03 .insta:nth-child(3) .left p {
+        text-align: left;
+    }
+
+    .best {
+        margin: 0;
+        width: 100%;
+    }
+
+    .best .swiper-button-next {
+        top: auto;
+        bottom: 79px;
+    }
+
+    .best .swiper-button-prev {
+        top: auto;
+        bottom: 79px;
+    }
+
+    .cont02,
+    .cont03,
+    .cont04,
+    .all,
+    .icon {
+        margin: 8rem auto;
+    }
+
+    .cont04 .event .swiper-wrapper .swiper-slide figure {
+        width: 100%;
+    }
+
+
+}
