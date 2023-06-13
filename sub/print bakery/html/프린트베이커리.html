@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>프린트베이커리</title>
+    <link href="css/프린트베이커리.css" rel="stylesheet" />
+
+    <script>
+        window.onload = function () {
+            let bodyTag = document.getElementsByTagName('body')[0];
+            let menuOpen = document.getElementsByClassName('menu_open')[0];
+            let menuClose = document.getElementsByClassName('menu_close')[0];
+            let hdMenu = document.getElementsByTagName('nav')[0];
+            hdMenu.style.display = 'none';
+
+            menuOpen.onclick = function () {
+                if (hdMenu.style.display == 'none') {
+                    hdMenu.style.display = 'block'
+
+                    bodyTag.classList.add('body_bg');
+                }
+            }
+            menuClose.onclick = function () {
+                if (hdMenu.style.display == 'block') {
+                    hdMenu.style.display = 'none'
+
+                    bodyTag.classList.remove('body_bg')
+                }
+            }
+            //이달의 큐레이션 탭메뉴
+            let cont01 = document.getElementsByClassName('cont01')[0];
+            let iconbtn_left = cont01.getElementsByClassName('left')[0];
+            let iconbtn_right = cont01.getElementsByClassName('right')[0];
+            let cont01Item = cont01.getElementsByClassName('item');
+            let i = 0;
+
+            iconbtn_right.onclick = function () {
+                i++;
+                if (i >= cont01Item.length) {
+                    i = cont01Item.length - 1
+                }
+                cont01Item[0].classList.remove('on');
+                cont01Item[1].classList.remove('on');
+                cont01Item[2].classList.remove('on');
+
+                cont01Item[i].classList.add('on');
+            }
+
+            iconbtn_left.onclick = function () {
+                i--;
+                if (i <= 0) {
+                    i = 0;
+                }
+                cont01Item[0].classList.remove('on');
+                cont01Item[1].classList.remove('on');
+                cont01Item[2].classList.remove('on');
+
+                cont01Item[i].classList.add('on');
+            }
+            let depth01 = document.getElementsByClassName('depth01')[1];
+            let depth02 = document.getElementsByClassName('depth02')[0];
+            depth02.style.display = 'none';
+
+            depth01.onclick = function () {
+                if (depth02.style.display == 'none') {
+                    depth02.style.display = 'block'
+                } else {
+                    depth02.style.display = 'none'
+                }
+            }
+
+        }//window.onload
+
+    </script>
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <div class="inner">
+                <div class="inner_up">
+                    <h1>
+                        <a href="#">
+                            <img src="img/프린트베이커리로고 2.png" alt="" />
+                        </a>
+                    </h1>
+                    <ul>
+                        <a href="#"><img src="img/🦆 icon _search_.png" alt="" /></a>
+                        <a href="#"><img src="img/🦆 icon _heart_.png" alt="" /></a>
+                        <a href="#"><img src="img/🦆 icon _cart_.png" alt="" /></a>
+                        <div class="menu_open">
+                            <a href="#"><img src="img/🦆 icon _menu_.png" alt="" /></a>
+                        </div><!-- .menu_open end -->
+                    </ul>
+
+                    <nav>
+                        <div class="menu_close">
+                            <img src="img/🦆 icon _close_.png" alt="" />
+                        </div><!-- .menu close end -->
+                        <ul>
+                            <li class="depth01">
+                                <a href="#">프로모션</a>
+                            </li>
+                            <li class="depth01">
+                                <a href="#">아트</a>
+                                <ul class="depth02">
+                                    <li><a href="#">전체</a></li>
+                                    <li><a href="#">베스트</a></li>
+                                    <li><a href="#">오리지널</a></li>
+                                    <li><a href="#">리미티드에디션</a></li>
+                                    <li><a href="#">아트포스터</a></li>
+                                    <li><a href="#">아트북</a></li>
+                                    <li><a href="#">골프</a></li>
+                                </ul><!-- .depth02 end -->
+                            </li>
+                            <li class="depth01">
+                                <a href="#">리빙</a>
+                            </li>
+                            <li class="depth01">
+                                <a href="#">가구</a>
+                            </li>
+                            <li class="depth01">
+                                <a href="#">프리미엄</a>
+                            </li>
+                            <li class="depth01">
+                                <a href="#">아티스트</a>
+                            </li>
+                            <li class="depth03 on">
+                                <a href="#">위베이크</a>
+                            </li>
+                            <li class="depth03">
+                                <a href="#">전시소식</a>
+                            </li>
+                            <li class="depth03">
+                                <a href="#">뉴스레터</a>
+                            </li>
+                           
+
+                        </ul>
+                    </nav>
+
+                </div><!-- .inner_up end -->
+
+                <ul class="menu">
+                    <li><a href>프로모션</a></li>
+                    <li><a href>아트</a></li>
+                    <li><a href>리빙</a></li>
+                    <li><a href>가구</a></li>
+                    <li><a href>프리미엄</a></li>
+                </ul><!-- .menu end -->
+            </div><!-- .inner end-->
+        </header>
+        <main>
+            <div class="img">
+                <div class="img01">
+                    <a href="#">
+                        <img src="img/Rectangle 2.png" alt="" />
+                    </a>
+                    <p>프린트베이커리 단독,
+                        유야 하스즈메 에디션 아트굿즈</p>
+                </div><!-- img01 end -->
+                <div class="img01">
+                    <a href="#">
+                        <img src="img/Rectangle 3.png" alt="" />
+                    </a>
+                    <p>색과 향이 풍부한 봄,
+                        이달의 루키</p>
+                </div><!-- img01 end -->
+                <div class="img01 ">
+                    <a href="#">
+                        <img src="img/Rectangle 4.png" alt="" />
+                    </a>
+                    <p>김환기,
+                        NEW Limited edition 출시</p>
+                </div><!-- img01 end -->
+                <div class="img02">
+                    <a href="#">
+                        <img src="img/Rectangle 5.png" alt="" />
+                    </a>
+                    <p>Zior Park X 유야 하시즈메</p>
+                </div><!-- img02 end -->
+                <div class="img01">
+                    <a href="#">
+                        <img src="img/Rectangle 6.png" alt="" />
+                    </a>
+                    <p>백자의 품위를 간직할 수 있게,
+                        달항아리 컬렉션</p>
+                </div><!-- img01 end -->
+                <div class="img03">
+                    <a href="#">
+                        <img src="img/Rectangle 7.png" alt="" />
+                    </a>
+                    <p>도도새 소장 하셨나요?
+                        김선우 아트굿즈 시리즈</p>
+                </div><!-- img03 end -->
+                <div class="img02">
+                    <a href="#">
+                        <img src="img/Rectangle 8.png" alt="" />
+                    </a>
+                    <p>별을 보는 사람들
+                        김선우 X 심채경 대담</p>
+                </div><!-- img02 end -->
+                <div class="img02">
+                    <a href="#">
+                        <img src="img/Rectangle 9.png" alt="" />
+                    </a>
+                    <p>For ldiots,
+                        이 세상의 모든 멍청이들을 위해</p>
+                </div><!-- img02 end -->
+                <div class="img03">
+                    <a href="#">
+                        <img src="img/Rectangle 10.png" alt="" />
+                    </a>
+                    <p>언젠간 하나의 추억이 될 오늘,
+                        권하나 개인전</p>
+                </div><!-- img03 end -->
+            </div><!-- .img end -->
+
+            <section class="cont01">
+                <h3>이달의 큐레이션</h3>
+                <p>새로운 프로모션</p>
+                <div class="list">
+                    <div class="icon">
+                        <a class="left" href="#"><img src="img/🦆 icon _chevron left_.png" alt="화살표 왼" /></a>
+                        <a class="right" href="#"><img src="img/Vector.png" alt="화살표 오" /></a>
+                    </div><!-- .icon end -->
+                    <div class="item on">
+                        <div class="pro">
+                            <figure>
+                                <a href="#">
+                                    <img src="img/itemimg1.png" alt="" />
+                                </a>
+                            </figure>
+
+                        </div><!-- .pro end -->
+
+                        <div class="text">
+                            <span>4.10 - 5.7</span>
+                            <h4>하태임 신작 출시, 봄과 함께 찾아온 Pink & Blue </h4>
+                            <P>여러 색들이 화면 가득 어우러진 리듬감, 화사한 색감이 주는
+                                에너지. 싱그러움을 가득 담은 하태임의 신작이 찾아왔습니다.</P>
+                        </div><!-- .text end -->
+                        <div class="picture">
+                            <div>
+                                <a href="#">
+                                    <img src="img/picture1.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p>하태임 Ha Taeim</p>
+                                <p>Un Passage No.221028, 2022</p>
+                                <b>구매 별도 문의</b>
+                                <div class="wish">
+                                    <img src="img/🦆 icon _heart_.png" alt="" />
+                                </div><!--.wish end-->
+                            </div><!-- .info end -->
+                        </div><!-- .picture end 1-->
+
+                        <div class="picture">
+                            <div>
+                                <a href="#">
+                                    <img src="img/picture2.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p>하태임 Ha Taeim</p>
+                                <p>Un Passage 23</p>
+                                <b>2,500,000원</b>
+                                <div class="wish">
+                                    <img src="img/🦆 icon _heart_.png" alt="" />
+                                </div><!--.wish end-->
+                            </div><!-- .info end -->
+                        </div><!-- .picture end 2-->
+
+                        <div class="picture">
+                            <div>
+                                <a href="#">
+                                    <img src="img/picture3.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p>하태임 Ha Taeim</p>
+                                <p>Un Passage 24</p>
+                                <b>2,500,000원</b>
+                                <div class="wish">
+                                    <img src="img/🦆 icon _heart_.png" alt="" />
+                                </div><!--.wish end-->
+                            </div><!-- .info end -->
+                        </div><!-- .picture end 3-->
+                    </div><!-- .item end 1-->
+
+                    <div class="item">
+                        <div class="pro">
+                            <figure>
+                                <a href="#">
+                                    <img src="img/itemimg2.png" alt="" />
+                                </a>
+                            </figure>
+
+                        </div><!-- .pro end -->
+
+                        <div class="text">
+                            <h4>싱그러운 삶을 위한 플랜테리어 </h4>
+                            <P>식목일에 나무를 심기는 어렵다면? 식집사가 되어 정성스레
+                                식물을 가꿔보세요!</P>
+                        </div><!-- .text end -->
+
+                        <div class="picture">
+                            <div>
+                                <a href="#">
+                                    <img src="img/picture4.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p>박소리 Park Sori</p>
+                                <p>Triangle series 01</p>
+                                <b>200,000원</b>
+                                <div class="wish">
+                                    <img src="img/🦆 icon _heart_.png" alt="" />
+                                </div><!--.wish end-->
+                            </div><!-- .info end -->
+                        </div><!-- .picture end 1-->
+                        <div class="picture">
+                            <div>
+                                <a href="#">
+                                    <img src="img/picture5.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p>박소리 Park Sori</p>
+                                <p>Triangle series 02</p>
+                                <b>180,000원</b>
+                                <div class="wish">
+                                    <img src="img/🦆 icon _heart_.png" alt="" />
+                                </div><!--.wish end-->
+                            </div><!-- .info end -->
+                        </div><!-- .picture end 2-->
+                        <div class="picture">
+                            <div>
+                                <a href="#">
+                                    <img src="img/picture6.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p>박소리 Park Sori</p>
+                                <p>Triangle series 03</p>
+                                <b>200,000원</b>
+                                <div class="wish">
+                                    <img src="img/🦆 icon _heart_.png" alt="" />
+                                </div><!--.wish end-->
+                            </div><!-- .info end -->
+                        </div><!-- .picture end 3-->
+                    </div><!-- .item end 2-->
+
+                    <div class="item">
+                        <div class="pro">
+                            <figure>
+                                <a href="#">
+                                    <img src="img/itemimg3.png" alt="" />
+                                </a>
+                            </figure>
+
+
+                        </div>
+                        <div class="text">
+                            <h4>하태임 신작 출시, 봄과 함께 찾아온 Pink & Blue </h4>
+                            <P>여러 색들이 화면 가득 어우러진 리듬감, 화사한 색감이 주는
+                                에너지. 싱그러움을 가득 담은 하태임의 신작이 찾아왔습니다.</P>
+                        </div><!-- .text end -->
+
+                        <div class="picture">
+                            <div>
+                                <a href="#">
+                                    <img src="img/picture7.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p>하태임 Ha Taeim</p>
+                                <p>Un Passage No.221028, 2022</p>
+                                <b>구매 별도 문의</b>
+                                <div class="wish">
+                                    <img src="img/🦆 icon _heart_.png" alt="" />
+                                </div><!--.wish end-->
+                            </div><!-- .info end -->
+                        </div><!-- .picture end 1-->
+                        <div class="picture">
+                            <div>
+                                <a href="#">
+                                    <img src="img/picture8.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p>하태임 Ha Taeim</p>
+                                <p>Un Passage 23</p>
+                                <b>2,500,000원</b>
+                                <div class="wish">
+                                    <img src="img/🦆 icon _heart_.png" alt="" />
+                                </div><!--.wish end-->
+                            </div><!-- .info end -->
+                        </div><!-- .picture end 2-->
+                        <div class="picture">
+                            <div>
+                                <a href="#">
+                                    <img src="img/picture9.png" alt="" />
+                                </a>
+                            </div>
+                            <div class="info">
+                                <p>하태임 Ha Taeim</p>
+                                <p>Un Passage 24</p>
+                                <b>2,500,000원</b>
+                                <div class="wish">
+                                    <img src="img/🦆 icon _heart_.png" alt="" />
+                                </div><!--.wish end-->
+                            </div><!-- .info end -->
+                        </div><!-- .picture end 3-->
+
+                    </div><!-- .item end 3-->
+                </div><!-- .list end -->
+            </section><!-- cont01 end -->
+
+            <section class="cont02">
+                <h3>프리미엄</h3>
+                <p>프린트베이커리 회원을 위한 프리미엄 작품을 소장하세요</p>
+                <div class="cont02_up">
+                    <figure>
+                        <img src="img/Rectangle 20.png" alt="" />
+                    </figure>
+                    <div>
+                        <img src="img/Ellipse 1.png" alt="" />
+                        <div class="cont02_info">
+                            <p>김선우</p>
+                            <b>The Stargazer IV, 2022</b>
+                        </div><!-- cont02_info -->
+                    </div>
+                </div><!-- .cont02_up end -->
+
+                <div class="cont02_down">
+                    <h3>위베이크</h3>
+                    <P>커피 한 잔과 읽는 가장 따끈한 미술 소식</P>
+                    <h3>전시소식</h3>
+                    <p>놓치면 안될 뉴웨이브 아티스트 전시</p>
+                    <h3>뉴스레터</h3>
+                    <P>아트에디터가 보내는 편지, 소중한 뒷 이야기</P>
+                </div><!-- .cont02 down end -->
+            </section><!-- .cont02 end -->
+
+            <section class="cont03">
+                <p>이름</p>
+                <p>이메일</p>
+                <div>
+                    <img src="img/🦆 icon _checkmark_.png" alt="" />
+                    <i>(필수) 개인정보 수집 및 이용에 동의합니다.</i>
+                </div>
+            </section><!-- .cont03 end -->
+
+            <footer>
+                <div class="footer_in">
+                    <h1>
+                        <img src="img/프린트베이커리로고 1.png" alt="" />
+                    </h1>
+                    <div class="up">
+                        <p>매장</p>
+                        <p>PB아카이브</p>
+                        <p>공지사항</p>
+                        <p>회원혜택</p>
+                        <p>채용</p>
+                        <p>입점</p>
+                    </div><!-- .up end -->
+                    <div class="down">
+                        <P>© PRINTBAKERY </P>
+                        <a href="#"><img src="img/🦆 icon _chevron bottom_.png" alt="" /></a>
+                    </div><!-- .down end -->
+                    <div class="footer_icon">
+                        <a href="#"><img src="img/🦆 icon _instagram bold_.png" alt="" /></a>
+                        <a href="#"><img src="img/🦆 icon _youtube bold_.png" alt="" /></a>
+                        <a href="#"><img src="img/🦆 icon _comment_.png" alt="" /></a>
+                        <a href="#"><img src="img/🦆 icon _menu square_.png" alt="" /></a>
+                    </div><!-- .footer_icon end -->
+                </div><!-- .footer in -->
+            </footer>
+        </main>
+
+    </div>
+</body>
+
+</html>
