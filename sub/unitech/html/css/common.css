@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/* 1. 웹폰트 연결 */
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('font/S-CoreDream-5Medium.eot');
+    src: url('font/S-CoreDream-5Medium.eot?#iefix') format('embedded-opentype'),
+        url('font/S-CoreDream-5Medium.woff2') format('woff2'),
+        url('font/S-CoreDream-5Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('font/S-CoreDream-6Bold.eot');
+    src: url('font/S-CoreDream-6Bold.eot?#iefix') format('embedded-opentype'),
+        url('font/S-CoreDream-6Bold.woff2') format('woff2'),
+        url('font/S-CoreDream-6Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('font/S-CoreDream-7ExtraBold.eot');
+    src: url('font/S-CoreDream-7ExtraBold.eot?#iefix') format('embedded-opentype'),
+        url('font/S-CoreDream-7ExtraBold.woff2') format('woff2'),
+        url('font/S-CoreDream-7ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('font/S-CoreDream-3Light.eot');
+    src: url('font/S-CoreDream-3Light.eot?#iefix') format('embedded-opentype'),
+        url('font/S-CoreDream-3Light.woff2') format('woff2'),
+        url('font/S-CoreDream-3Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'S-CoreDream';
+    src: url('font/S-CoreDream-4Regular.eot');
+    src: url('font/S-CoreDream-4Regular.eot?#iefix') format('embedded-opentype'),
+        url('font/S-CoreDream-4Regular.woff2') format('woff2'),
+        url('font/S-CoreDream-4Regular.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+body {
+    color: #333;
+    line-height: 1;
+    font-family: 'S-CoreDream';
+    font-weight: 200;
+}
+#wrap {
+    max-width: 640px; /* 현재크기만큼 보이는것 : max-width  */
+    width: 100%;
+    /* max-width와 width를 같이 사용할 경우 max-width값보다 작을 때 width값으로 적용  */
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+.inner {
+    width: calc(100% - 30px);
+    margin: 0 auto;
+}
+/* header */
+header {
+    width: 100%;
+    height: 70px;
+    position: fixed; /* position: fixed있을때 width값 필수 */
+    top: 0;
+    left: 0;
+    background-color: #ffffff86;
+    z-index: 9;
+
+}
+header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+header .inner h1 {
+    font-size: 0 ;
+    /* 로고이미지가 중앙에 오지않을때 h1폰트크기가
+     잡혀있을수도 있어서 fontsize 0잡아줌 */
+}
+header .inner h1 a {}
+header .inner h1 a  img {}
+header .inner .menu_list {
+    display: flex;
+    align-items: center;
+
+}
+header .inner .menu_list .lang_list {}
+header .inner .menu_list .lang_list  li {
+    display: inline-block;
+    margin-right: 15px;
+}
+header .inner .menu_list .lang_list  li a {}
+header .inner .menu_list img {
+    width: 25px;
+}
+header .inner nav {
+    display: none;
+}
+
+/* footer */
