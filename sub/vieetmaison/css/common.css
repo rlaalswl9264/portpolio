@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* 나눔명조. 프리텐다드
+regular,bold */
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@import url('https://fonts.googleapis.com/earlyaccess/nanummyeongjo.css');
+
+.nanummyeongjo * {
+ font-family: 'Nanum Myeongjo', serif;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+html, body {
+    font-size: 62.5%; /* 폰트의 기본값 10px로 지정 */
+    /* font-size:10px -> 1rem
+    rem은 폰트사이즈에 따라 변화하는 것 = px과 같은 고정값
+    -화면의 크기에 반응 x
+    -여백과 큰타이틀일때 사용함 */
+    color: #333;
+    font-family: 'Pretendard-Regular';
+    font-weight: 400;
+}
+h3 {
+    font-family: 'Nanum Myeongjo', serif;
+    font-weight: 400;
+    font-size: 2.8rem;
+    margin-bottom: 3rem;
+}
+.inner {
+    max-width: 1360px;
+    width: calc(100% - 40px);
+    margin: 18rem auto;
+    /* margin: 180px auto */
+}
+.mobile {display: none;}
+@media screen and (max-width:1024px) {
+    .pc {display: none;}
+    .mobile {display: block;}
+}
