@@ -1,0 +1,747 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 400;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.eot?#iefix') format('embedded-opentype'), 
+    url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.woff') format('woff'),
+    url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWeb.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 700;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.eot?#iefix') format('embedded-opentype'), 
+    url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.woff') format('woff'), 
+    url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebBold.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'NanumBarunGothic';
+    font-style: normal;
+    font-weight: 300;
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot');
+    src: url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.eot?#iefix') format('embedded-opentype'), 
+    url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.woff') format('woff'), 
+    url('https://cdn.jsdelivr.net/font-nanumlight/1.0/NanumBarunGothicWebLight.ttf') format('truetype');
+}
+
+.nanumbarungothic * {
+    font-family: 'NanumBarunGothic', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body {
+    line-height: 1;
+    color: #333;
+    font-family: 'NanumBarunGothic';
+    font-weight: 400;
+    /*  background-color: azure; */
+    min-width: 1920px;
+    /* 작은 화면에서 min-width의 값이 1920px으로 보여짐 */
+}
+
+h5 {
+    width: 1920px;
+    height: 40px;
+    background-color: #fae6d9;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    line-height: 40px;
+}
+
+h5 p {
+    width: 64px;
+    height: 29px;
+    border-radius: 14.5px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 29px;
+    margin-right: 17px;
+    margin-top: 6px;
+}
+
+header {
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header h1 {
+    position: relative;
+    z-index: 1;
+
+}
+
+header h1 a img {
+    position: absolute;
+    top: 50%;
+    left: 50px;
+    transform: translateY(-50%);
+}
+
+header nav ul {
+    display: flex;
+    justify-content: space-between;
+    line-height: 80px;
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+
+}
+
+header nav ul li {
+    /* margin-right: 84px; */
+    z-index: 1;
+    margin-right: 84px;
+}
+
+header nav:nth-of-type(2) .menu li {
+    margin-left: 20px;
+    margin-right: 0;
+
+}
+
+header nav:nth-of-type(2) .menu {
+    margin-right: 50px;
+}
+
+.cont01 {
+    position: relative;
+}
+
+.cont01 div {
+    width: 1920px;
+    height: 970px;
+    position: relative;
+}
+
+.cont01 div a img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -80px;
+    left: 0;
+}
+
+.cont01 .slides_nav {
+    width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+}
+
+.cont01 .slides_nav a {
+    margin: 0 30px;
+}
+
+.cont02 {
+    padding: 190px 0;
+}
+
+.cont02 h3 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cont02 .list {
+    display: flex;
+    justify-content: space-between;
+    width: 1280px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.cont02 .list .item {
+    width: 413px;
+    height: 488px;
+    margin: 100px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cont02 .list .item a figure {
+    width: 100%;
+    height: 100%;
+
+}
+
+.cont02 .list .item a figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont02 .list .item a figure span {
+    font-size: 18px;
+    color: #fff;
+    background-color: #f9cdd2;
+    width: 54px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cont02 .list .item a .text {
+    background-color: #ffffffc7;
+    width: 413px;
+    height: 176px;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+    transition: 1s;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.cont02 .list .item a .text h4 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.cont02 .list .item a .text strong {
+    font-size: 20px;
+    width: 100%;
+}
+
+.cont02 .list .item a .text b {
+    color: #fc8d9a;
+}
+
+.cont02 .list .item a .text span {
+    color: #898989;
+    font-size: 15px;
+    text-decoration: line-through;
+}
+
+.cont02 .list .item a .icon {
+    position: absolute;
+    right: 5px;
+    bottom: 0;
+}
+
+.cont02 .list .item a .icon div {
+    background-color: #ffffffc7;
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    margin: 10px 0;
+}
+
+.cont02 .list .item a .icon div img {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cont02 .list .item a figure {
+    position: relative;
+}
+
+.cont02 .list .item a figure .inner {
+    background-color: #fff;
+    width: 68.31px;
+    height: 68.31px;
+    border-radius: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 10px;
+}
+
+.cont02 .list .item a figure .inner P {
+    font-size: 10px;
+}
+
+.cont02 .list .item a figure .inner strong {
+    font-size: 15px;
+    margin-top: 3px;
+}
+
+.cont02 .more {
+    padding-top: 100px;
+
+}
+
+.cont02 .more a {
+    width: 1280px;
+    display: flex;
+    justify-content: flex-end;
+    /* flex를 줬으면 flex로 이동 */
+    margin: 0 auto;
+
+}
+
+.cont02 .more p {
+    font-size: 18px;
+    margin-right: 13px;
+    line-height: 27px;
+}
+
+.cont02 .more img {
+    width: 13px;
+    height: 27px;
+    object-fit: cover;
+}
+
+.cont02 .list .item:hover .text {
+    opacity: 1;
+    /* 호버했을때 스르륵올라오게 하는 효과 */
+}
+
+.cont03 {
+    width: 1920px;
+    background-color: #efeee9;
+}
+
+.cont03 .item {
+    padding: 100px 0;
+}
+
+.cont03 .item .cont03_top {
+    display: flex;
+    position: relative;
+}
+
+.cont03 .item .cont03_top img {
+    width: 773px;
+    height: 1123px;
+    object-fit: cover;
+    margin-left: 250px;
+
+}
+
+.cont03 .item .cont03_top div {
+    display: flex;
+    position: relative;
+    width: 550px;
+}
+
+.cont03 .item .cont03_top div figure img {
+    position: absolute;
+    bottom: 50px;
+    right: 0;
+}
+
+.cont03 .item .cont03_top div h1 {
+    font-size: 200px;
+    color: #b5b8cc;
+    text-align: center;
+    padding-top: 347px;
+    padding-left: 167px;
+
+}
+
+.cont03 .item .cont03_top div img {
+    width: 92px;
+    height: 92px;
+    position: absolute;
+    right: 177px;
+    bottom: 49px;
+}
+
+.cont03 .item .cont03_bottom {
+    padding-top: 200px;
+    position: relative;
+    display: flex;
+}
+
+.cont03 .item .cont03_bottom div img {
+    width: 92px;
+    height: 92px;
+
+}
+
+.cont03 .item .cont03_bottom div figure img {
+    transform: rotate(180deg);
+    position: absolute;
+    left: 0;
+    bottom: 50px;
+
+}
+
+.cont03 .item .cont03_bottom div {
+    order: -1;
+    position: relative;
+}
+
+.cont03 .item .cont03_bottom div h1 {
+    color: #e2bca7;
+}
+
+.cont04 {
+    position: relative;
+}
+
+.cont04>img {
+    width: 100%;
+    height: 1070px;
+    object-fit: cover;
+    display: block;
+}
+
+.cont04 h3 {
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cont04 .review_item {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.cont04 .review_list {
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.cont04 figure img {
+    width: 653px;
+    height: 468px;
+    object-fit: cover;
+}
+
+.cont04 .review_list .review_text {
+    padding-left: 40px;
+}
+
+.cont04 .review_list .review_text h2 {
+    font-size: 30px;
+    font-weight: 700;
+    padding: 30px 0 40px;
+}
+
+.cont04 .review_list .review_text p {
+    font-size: 20px;
+}
+
+.cont04 .review_list .review_text .star img {
+    width: 23px;
+    height: 23px;
+    object-fit: cover;
+    margin: 16px 0 35px;
+}
+
+.cont04 .review_list .review_text b {
+    border: 1px solid #333;
+    background-color: #ebeae7;
+    width: 157px;
+    height: 52px;
+    border-radius: 26px;
+    padding: 15px 15px;
+}
+
+.cont04 .review_list .slides_nav {
+    width: 1280px;
+    margin: 0 auto;
+    position: absolute;
+    top: 50%;
+    left: -15%;
+    display: flex;
+    transform: translateY(-50%);
+    justify-content: space-between;
+}
+
+.cont04 .review_list .slides_nav img {
+    width: 22px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cont05 {
+    height: 370px;
+    background-color: #cdcccc;
+}
+
+.cont05 h3 {
+    font-size: 45px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 80px 0 40px;
+}
+
+.cont05 .cont05_item {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.cont05 .cont05_item .cont05_list {
+    text-align: center;
+}
+
+.cont05 .cont05_item .cont05_list strong {
+    color: #fff;
+    font-size: 25px;
+}
+
+.cont05 .cont05_item .cont05_list p {
+    font-size: 25px;
+    color: #898989;
+    position: relative;
+    margin: 20px 0;
+}
+
+.cont05 .cont05_item .cont05_list p::before {
+    content: '';
+    width: 315px;
+    background-color: #ffffff;
+    height: 2px;
+    position: absolute;
+    bottom: -10PX;
+    left: 50%;
+    display: block;
+    transform: translate(-50%, -50%);
+
+}
+
+.cont05 .cont05_item .cont05_list .cont05_logo {
+    width: 240px;
+    height: 20px;
+    display: flex;
+    margin-top: 10px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.cont05 .cont05_item .cont05_list .cont05_logo img {
+    margin: 0 5px;
+}
+
+.cont06 {
+    width: 1920px;
+}
+
+.cont06 .cont06_item {
+    width: 100%;
+    height: 390px;
+    display: flex;
+    position: relative;
+}
+
+.cont06 .cont06_item .cont06_list01 {
+    width: 990px;
+    background-color: #feeced;
+    padding: 119px 250px;
+
+}
+
+.cont06 .cont06_item .cont06_list01 figure img {
+    width: 150px;
+    height: 154px;
+    position: absolute;
+    top: 137px;
+    left: 550px;
+}
+
+.cont06 .cont06_item .cont06_list02 {
+    width: 990px;
+    background-color: #facdd2;
+    padding: 119px 250px;
+}
+
+.cont06 .cont06_item .cont06_list02 figure img {
+    width: 213px;
+    height: 200px;
+    position: absolute;
+    top: 100px;
+    right: 200px;
+}
+
+.cont06 .cont06_item .cont06_list01 h3 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #d71f33;
+    margin-bottom: 37px;
+}
+
+.cont06 .cont06_item .cont06_list01 p,
+.cont06 .cont06_item .cont06_list02 p {
+    font-size: 40px;
+    font-weight: 700;
+    color: #333;
+    line-height: 1.3;
+}
+
+.cont06 .cont06_item .cont06_list02 h3 {
+    font-size: 35px;
+    font-weight: 700;
+    color: #fb828f;
+    margin-bottom: 37px;
+}
+
+.cont07 {
+    width: 1280px;
+    margin: 0 auto;
+}
+
+.cont07 .inner {
+    width: 100%;
+    margin: 195px 0;
+
+}
+
+.cont07 .inner a div {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.cont07 .inner a div p {
+    font-size: 18px;
+    color: #898989;
+    margin-bottom: 20px;
+}
+
+.cont07 .inner a div b {
+    font-size: 25px;
+    color: #333;
+    margin-bottom: 50px;
+}
+
+.cont07 .cont07_item {
+    width: 1280px;
+}
+
+.cont07 .cont07_item figure {
+    height: 400px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont07 .cont07_item figure img {
+    width: 400px;
+    height: 100%;
+    object-fit: cover;
+}
+
+.footer {
+
+    height: 370px;
+    background-color: #e8e8e8;
+    display: flex;
+}
+
+.footer .list {
+    width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    padding: 60px 0;
+    justify-content: space-between;
+}
+
+/* .footer .list .left .item figure img {
+    margin: 60 0 20px;
+} */
+.footer .list .left {
+    width: 310px;
+}
+
+.footer .list .left .item .up {
+    margin-top: 15px;
+}
+
+.footer .list .left .item .up P {
+    font-size: 14px;
+    color: #898989;
+    padding-bottom: 10px;
+}
+
+.footer .list .left .item .down {
+    border: 2px solid #333;
+    position: relative;
+    font-size: 15px;
+    width: 200px;
+    height: 52px;
+    padding-left: 19px;
+    line-height: 52px;
+}
+
+/* a가 인라인요소라서 display:block 써도 되지만
+a나 b(a밑에글)같은 자식에 간격과 테두리잡지말고
+부모한테잡아주기 */
+.footer .list .left .item .down a b img {
+    position: absolute;
+    top: 50%;
+    right: 19px;
+    transform: translateY(-50%);
+}
+
+.footer .list .right {
+    display: flex;
+    width: 890px;
+    justify-content: space-between;
+
+}
+
+.footer .list .right .item strong {
+    font-size: 15px;
+    margin-bottom: 20px;
+    display: block;
+
+}
+
+.footer .list .right .item p {
+    font-size: 14px;
+    color: #898989;
+    padding-bottom: 15px;
+    line-height: 1.3;
+}
+
+
+/* .footer .footer02 p, 
+.footer .footer03 p,
+.footer .footer04 p,
+.footer .footer05 p {
+    margin: 10px 0;
+} */
+/* 위60, 옆80 */
