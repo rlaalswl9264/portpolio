@@ -53,7 +53,7 @@ body {
     line-height: 1;
     font-family: 'Gmarket Sans TTF';
     font-weight: 400;
-    background-image: url("../img/포폴-배경이미지-[Recovered].png");
+    background-image: url("../img/배경이미지.jpg");
     background-repeat: no-repeat;
 }
 
@@ -62,7 +62,7 @@ body {
     background-color: #fff;
     position: fixed;
     width: 100%;
-    z-index: -9;
+    z-index: 9999;
     top: 0;
     left: 0;
     height: 100%;
@@ -124,14 +124,15 @@ header.on .inner .pc .gnb {
     z-index: 1;
     background-color: #ffffffbb;
     width: 100%;
-    height: 80px;
+    height: 50px;
     align-items: center;
     transition: top 0.3s, background-color 0.5s;
 }
 
-header.on .inner .pc .gnb li.in {
+/* header.on .inner .pc .gnb li.in,
+header.on .inner .pc .gnb li. {
     color: #F700BA;
-}
+} */
 
 header .inner .pc .gnb li {
     margin-right: 50px;
@@ -144,14 +145,23 @@ header .inner .profile {
 header .inner h3#title {
     font-size: 40px;
     color: #F700BA;
-    margin: 60px 0;
+    margin: 30px 0;
 }
 header .inner i {
     display: block;
     text-align: end;
     color:#F700BA;
-    font-size: 15px;
-    margin: 20px;
+    font-size: 25px;
+    margin-bottom: 70px;
+    animation: i 1s infinite alternate linear;
+}
+@keyframes i {
+    0% {
+        transform: translateY(50px) rotateY(0);
+    }
+    100% {
+        transform: translateY(0) rotateY(0);
+    }
 }
 header .inner .profile .pf_img {
     width: 100%;
@@ -426,12 +436,12 @@ header .inner .profile .right .Personarity ul li:nth-child(3) {
 }
 
 .Project .inner .other .left figure p {
-    width: 228px;
-    height: 495px;
+    width: 220px;
+    height: 480px;
     overflow: hidden;
     position: absolute;
-    top: 10px;
-    left: 8px;
+    top: 13px;
+    left: 13px;
     border-radius: 26px;
 }
 
@@ -459,7 +469,8 @@ header .inner .profile .right .Personarity ul li:nth-child(3) {
     overflow: hidden;
 }
 
-.Project .inner .all .list {
+.Project .inner .all .list,
+.Project .inner .other .list {
     width: calc(100% - 50%);
     display: flex;
     justify-content: space-between;
@@ -496,11 +507,13 @@ header .inner .profile .right .Personarity ul li:nth-child(3) {
     text-align: center;
   
 }
-.Project .inner .all .list .item:nth-child(2n) {
+.Project .inner .all .list .item:nth-child(2n),
+.Project .inner .other .list .item:nth-child(2n) {
     margin-top: 150px;
 }
 
-.Project .inner .all .list .item:nth-child(2n) nav {
+.Project .inner .all .list .item:nth-child(2n) nav,
+.Project .inner .other .list .item:nth-child(2n) nav {
     margin-bottom: 150px;
 }
 
@@ -552,7 +565,8 @@ header .inner .profile .right .Personarity ul li:nth-child(3) {
 
 .Project .inner .all .list .item .info nav li:hover,
 .Project .inner .other .list .item .info nav li:hover {
-    background: url('../img/호버그라데이션.png') center center / cover no-repeat;
+   background-color: #000000;
+   color: #fff;
 }
 
 .Project .inner .all .list .item .info nav li,
@@ -606,6 +620,13 @@ header .inner .profile .right .Personarity ul li:nth-child(3) {
 .footer {
     text-align: center;
     line-height: 1.5;
+    background-image: url('../img/  `호버그라데이션.png');
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px;
+}
+.footer p {
+    font-size: 20px;
 }
 /* .carouselTicker__list {
     margin: 10px 0;

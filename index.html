@@ -20,6 +20,7 @@
             //일정시간 뒤에 시행 
             setTimeout(function () {
                 loadingPage.style.opacity = '0';
+                loadingPage.style.zIndex = '-9';
             }, 2000)
 
             //AOS.init();
@@ -47,9 +48,8 @@
                 }
             })
                 
-           
         })
-
+    
 
 
     </script>
@@ -82,14 +82,14 @@
 
             <nav class="pc">
                 <ul class="gnb">
-                    <li class="in"><a href="#">Profile</a></li>
-                    <li class="in1"><a href="#">Project</a></li>
-                    <li><a href="#">Graphic</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="#pf">Profile</a></li>
+                    <li><a href="#pj">Project</a></li>
+                    <li><a href="#gp">Graphic</a></li>
+                    <li><a href="#ct">Contact</a></li>
                 </ul><!-- .gnb end -->
             </nav><!-- .pc end -->
 
-            <section class="profile">
+            <section class="profile" id class="pf">
                 <div>
                     <h3 class id="title">profile</h3>
                     <div class="pf_img">
@@ -192,7 +192,7 @@
             </section><!-- .profile end -->
         </div><!-- .inner -->
 
-        <section class="Project">
+        <section class="Project" id="pj">
             <div class="inner">
                 <h3 class id="title">Project</h3>
                 <i>로고 click !</i>
@@ -219,9 +219,9 @@
                                     <p>- 디자인 : 100%</p>
                                     <p>- 퍼블리싱 : 100%</p>
                                 </ul>
-                                <nav>
+                               <!--  <nav>
                                     <li><a href="#">웹페이지</a></li>
-                                </nav>
+                                </nav> -->
                             </div><!-- .info end -->
                         </div><!-- .item end 1-->
 
@@ -239,7 +239,7 @@
                                     <p>- 퍼블리싱 : 100%</p>
                                 </ul>
                                 <nav>
-                                    <li><a href="sub/romand/롬앤 기획안.pdf" target="_blank"></a>프로세스</li>
+                                    <li><a href="sub/romand/롬앤 기획안.pdf"></a>프로세스</li>
                                     <li><a href="https://rlaalswl9264.github.io/romand/">웹페이지</a></li>
                                 </nav>
                             </div><!-- .info end -->
@@ -375,7 +375,7 @@
             </div><!-- .inner end -->
         </section><!-- .project end -->
 
-        <section class="Graphic">
+        <section class="Graphic" id="gp">
             <div class="inner">
                 <h3 class id="title">Graphic</h3>
                 <div class="g_list">
@@ -450,7 +450,7 @@
             </div><!-- .inner end -->
         </section><!-- .Graphic end -->
 
-        <section class="footer">
+        <section class="footer" id="ct">
             <p>“ 시간 내어 제 작품들을 봐 주셔서 감사합니다.
                 저에 대해 궁금하신 사항이 있다면 언제든지 연락주세요.
                 감사합니다. ”</p>
