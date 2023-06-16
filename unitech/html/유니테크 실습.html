@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유니테크</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link href="css/유니테크실습.css" rel="stylesheet">
+
+    <!-- jquery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"
+        integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        $(function () {
+            var swiper = new Swiper(".mySwiper", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });//swiper end
+
+            $('.swiper-play').click(function () {
+                swiper.autoplay.start();
+            })
+        
+
+    
+            let cont01 = document.getElementsByClassName('cont01')[0];
+            let menuBtn = cont01.getElementsByTagName('li');
+            let cont01List = cont01.getElementsByClassName('item');
+            let title = cont01.getElementsByClassName('title')[0];
+            let cont02 = document.getElementsByClassName('cont02')[0];
+            let h3 = cont02.getElementsByTagName('h3')[0];
+            for (let i = 0; i < menuBtn.length; i++) {
+                menuBtn[i].onclick = function () {
+                    //menuBtn에 [i]를 붙이는 이유:
+                    //menuBtn에 해당하는 i가 여러개라서 지정해줘야함
+                    cont01List[0].classList.remove('on')
+                    cont01List[1].classList.remove('on')
+                    cont01List[2].classList.remove('on')
+
+                    cont01List[i].classList.add('on')
+
+                    menuBtn[0].classList.remove('on')
+                    menuBtn[1].classList.remove('on')
+                    menuBtn[2].classList.remove('on')
+
+                    menuBtn[i].classList.add('on')
+                }
+            }
+            let play = document.getElementsByClassName('swiper-play')[0];
+            let stop = document.getElementsByClassName('swiper-stop')[0];
+            play.style.display = 'none';
+            stop.onclick = function () {
+                swiper.autoplay.stop();
+                if(play.style.display == 'none') {
+                    play.style.display = 'block';
+                    stop.style.display = 'none';
+                }
+                play.onclick = function () {
+                    swiper.autoplay.start();
+                    if(stop.style.display == 'none') {
+                        stop.style.display = 'block';
+                        play.style.display = 'none';
+                    }
+                }
+            }
+            //cont01 title
+            window.onscroll = function () {
+                let scrollBar = window.scrollY;
+                console.log(scrollBar);
+                console.log(title.offsetTop); 
+                //console은 테스트하는거 의미X 
+                // 스크롤바, offsettop수치 확인하는것
+                if (cont01.offsetTop / 2 < scrollBar) {
+                    title.classList.add('on');
+                } else {
+                    title.classList.remove('on');
+                }
+            
+                if (cont02.offsetTop / 2 < scrollBar) {
+                    h3.classList.add('on');
+                } else {
+                    h3.classList.remove('on');
+                }
+                 
+            }
+            
+      
+    })
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="inner">
+            <h1>
+                <a href="#">
+                    <img src="img/logo_color.svg" alt="로고" />
+                </a>
+            </h1>
+            <div class="menu_list">
+                <div class="menu_left">
+                    <a href="#">KR</a>
+                    <a href="#">EN</a>
+                </div><!-- .menu_left end -->
+                <a href="#">
+                    <img src="img/menu.png" alt="메뉴 아이콘" />
+                </a>
+            </div><!-- .menu_list end -->
+        </div><!-- .inner end -->
+    </header>
+
+    <main>
+        <!-- Swiper -->
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="img/img1.jpg" alt="" />
+                    <div class="inner">
+                        <h2>
+                            더 나은 미래를 위한<br />
+                            모빌리티 솔루션을 제공합니다.
+                        </h2>
+                    </div><!-- .inner end -->
+                </div><!-- .swiper-slide end / 1-->
+                <div class="swiper-slide">
+                    <img src="img/img2.jpg" alt="" />
+                    <div class="inner">
+                        <h2>
+                            더 나은 미래를 위한<br />
+                            모빌리티 솔루션을 제공합니다.
+                        </h2>
+                    </div><!-- .inner end -->
+                </div><!-- .swiper-slide end / 2-->
+                <div class="swiper-slide">
+                    <img src="img/img3.jpg" alt="" />
+                    <div class="inner">
+                        <h2>
+                            더 나은 미래를 위한<br />
+                            모빌리티 솔루션을 제공합니다.
+                        </h2>
+                    </div><!-- .inner end -->
+                </div><!-- .swiper-slide end / 3-->
+
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-pagination"></div>
+
+            <!-- 정지 재생 추가 -->
+            <div class="swiper_control">
+                <div class="swiper-play">
+                    <img src="img/play.png" alt="재생" />
+                </div><!-- swiper-play end -->
+                <div class="swiper-stop">
+                    <img src="img/stop.png" alt="정지" />
+                </div><!-- swiper-stop end -->
+            </div><!-- .swiper_control end -->
+        </div>
+    </main>
+
+    <section class="cont01">
+        <div class="inner">
+            <div class="title on">
+                <h3><span>24년 이상의</span>
+                    특수화학 솔루션 전문기업</h3>
+                <p>접착제 솔루션 전문기업 유니테크는 자동차, 조선/해양, EV, 전자 등 다양한 산업분야에서 새로운 비즈니스를 창출해 나갑니다.</p>
+            </div><!-- .title end -->
+            <div class="list">
+                <ul class="menu">
+                    <li class="on">MOBILITY</li>
+                    <li>ENERAY</li>
+                    <li>INNOVATION</li>
+                </ul><!-- .menu end -->
+                <div class="item on">
+                    <figure>
+                        <img src="img/img4.jpg" alt="" />
+                    </figure>
+                    <div>
+                        <span>
+                            첨단 모빌리티 소재의 중심
+                        </span>
+                        <h4>MOBILITY</h4>
+                        <p>보다 안전하고, 보다 가벼워질 수 있는 모빌리티 소재를 제공합니다.</p>
+                        <a href="#">AUTOMOTIVE</a>
+                    </div>
+                </div><!-- .item end 1-->
+                <div class="item">
+                    <figure>
+                        <img src="img/img5.jpg" alt="" />
+                    </figure>
+                    <div>
+                        <span>
+                            지속가능한 에너지 솔루션
+                        </span>
+                        <h4>ENERGY</h4>
+                        <p>독창적인 기술력과 우수한 품질로 지속가능한 에너지 솔루션을 제안합니다.
+                        </p>
+                        <a href="#">LNG CARRIER</a>
+                        <a href="#">BATTERY</a>
+                    </div>
+                </div><!-- .item end 2-->
+                <div class="item">
+                    <figure>
+                        <img src="img/img6.jpg" alt="" />
+                    </figure>
+                    <div>
+                        <span>
+                            미래 혁신 소재 구현
+                        </span>
+                        <h4>INNOVATION</h4>
+                        <p>극한의 환경에도 적용할 수 있는 첨단 접착 소재를 구현합니다.</p>
+                        <a href="#">ELECTRONICS</a>
+                        <a href="#">AEROSPACE</a>
+                    </div>
+                </div><!-- .item end 3-->
+            </div><!-- .list end -->
+
+
+        </div><!-- .inner end -->
+    </section><!-- .cont01 end -->
+    <section class="cont02">
+        <div class="inner">
+            <h3 class="on">우수한 품질과 기술로 최상의 고객만족을<br />
+                실현해나가겠습니다.</h3>
+            <div class="text_list">
+                <div>
+                    <strong>20</strong>
+                    <span>년</span>
+                    <p>자동차, 선박제품 연구개발 경력</p>
+                </div>
+                <div>
+                    <strong>15</strong>
+                    <span>만톤</span>
+                    <p>전 세계 제품 제조 역량</p>
+                </div>
+                <div>
+                    <strong>250</strong>
+                    <span>척</span>
+                    <p>LNG Carrier 누적 건조척 수</p>
+                </div>
+                <div>
+                    <strong>100</strong>
+                    <span>개</span>
+                    <p>공급 고객사</p>
+                </div>
+
+            </div><!-- .text_list end -->
+        </div><!-- .inner end -->
+        <div class="text_end">
+            <p>진보된 기술력을 바탕으로 고객에게<br />
+                지속가능한 경쟁력을 제공하는 유니테크로<br />
+                발전해 나가겠습니다.</p>
+        </div><!-- .text_end end -->
+
+    </section><!-- .cont02 end -->
+    <footer>
+        <div class="inner">
+            <p>ⓒ 2023 Unitech Co., Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+<!-- https://jwebdew.github.io/20230418/# -->
