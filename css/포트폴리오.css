@@ -522,11 +522,11 @@ header .inner .profile .right .Personarity ul li:nth-child(3) {
 }
 
 
-.Project .inner .all .list .item:nth-child(2n) nav li:last-child,
+/* .Project .inner .all .list .item:nth-child(2n) nav li:last-child,
 .Project .inner .other .list .item:nth-child(2n) nav li:last-child {
     margin-bottom: 50px;
 }
-
+ */
 .Project .inner .all .list .item .info,
 .Project .inner .other .list .item .info {
     font-size: 20px;
@@ -537,6 +537,7 @@ header .inner .profile .right .Personarity ul li:nth-child(3) {
 .Project .inner .other .list .item .info ul p {
     font-size: 16px;
     margin-bottom: 10px;
+    line-height: 1.3;
 }
 
 .Project .inner .all .list .item .info ul li,
@@ -583,6 +584,9 @@ header .inner .profile .right .Personarity ul li:nth-child(3) {
 /* .Project .inner .all .list .item .info nav li > last-child {
     border-bottom: 1px solid #000;
 } */
+.Graphic {
+    overflow: hidden;
+}
 .Graphic .inner .g_list {
     display: flex;
     justify-content: space-between;
@@ -618,17 +622,50 @@ header .inner .profile .right .Personarity ul li:nth-child(3) {
 }
 
 .footer {
-    text-align: center;
     line-height: 1.5;
-    background-image: url('../img/  `호버그라데이션.png');
-    background-repeat: no-repeat;
-    width: 100%;
-    height: 200px;
-
+    align-items: center;
+}
+.footer .inner {
+    width: calc(100% - 600px);
+    justify-content: space-between;
+    text-align: center;
+    margin-top: 255px;
 }
 .footer p {
-    font-size: 20px;
+    font-size: 35px;
+    margin-bottom: 100px;
 }
+.footer span {
+    font-size: 14px;
+    color: #808080;
+    margin-top: 100px;
+}
+/* .footer .f_right img {
+    animation: f_right 1s infinite alternate linear;
+} */
+
+
+@keyframes f_right {
+    0% {
+        transform: translateY(50px) rotateY(0);
+    }
+    100% {
+        transform: translateY(0) rotateY(0);
+    }
+}
+.footer .f_right {
+    margin-bottom: 100px;
+    animation: f_right 1s infinite alternate linear;
+}
+.footer .f_right b {
+    display: block;
+    color: #F700BA;
+}
+.footer .f_right img {
+    width: 200px;
+    height: 200px;
+}
+
 /* .carouselTicker__list {
     margin: 10px 0;
     padding: 0;

@@ -12,9 +12,10 @@
 
     <script src="js/포트폴리오.js"></script>
 
+
     <script>
-        $(function(){
-    
+        $(function () {
+
             //스플래쉬 화면(로딩페이지)
             let loadingPage = document.getElementById('loading');
             //일정시간 뒤에 시행 
@@ -27,29 +28,29 @@
             let hd = $('header');
             let pbar = $('.bar');
             let profile = $('.profile');
-            $(window).scroll(function(){
+            $(window).scroll(function () {
                 let scrollBar = $(window).scrollTop();
                 console.log(scrollBar);
                 console.log(hd.offsetTop); //헤더가 가진 오프셋탑값 100
-               if(hd.offset().top < scrollBar / 9 ) {
+                if (hd.offset().top < scrollBar / 9) {
                     hd.addClass('on');
                 } else {
                     hd.removeClass('on');
                 }
-             /*    if(hd.offsetTop < scrollBar / 7 ) {
-                    hd.addClass('on');
-                } else {
-                    hd.removeClass('on');
-                } */
-                if(profile.offset().top < scrollBar ) {
+                /*    if(hd.offsetTop < scrollBar / 7 ) {
+                       hd.addClass('on');
+                   } else {
+                       hd.removeClass('on');
+                   } */
+                if (profile.offset().top < scrollBar) {
                     pbar.addClass('on');
                 } else {
                     pbar.removeClass('on');
                 }
             })
-                
+
         })
-    
+
 
 
     </script>
@@ -213,15 +214,17 @@
                             <div class="info">
                                 <ul>
                                     <li>기본형 홈페이지 리뉴얼</li>
-                                    <li>사용프로그램 Html css Photoshop</p>
+                                    <li>사용프로그램</li>
+                                    <p>Photoshop</p>
                                     <li>참여도</li>
                                     <p>- 기획 : 100%</p>
                                     <p>- 디자인 : 100%</p>
-                                    <p>- 퍼블리싱 : 100%</p>
                                 </ul>
-                               <!--  <nav>
-                                    <li><a href="#">웹페이지</a></li>
-                                </nav> -->
+                                <nav>
+                                    <a href="sub/cafe051/김민지_서비스경험디자인시나리오개발.pdf" target="_blank">
+                                        <li>기획안</li>
+                                    </a>
+                                </nav>
                             </div><!-- .info end -->
                         </div><!-- .item end 1-->
 
@@ -232,15 +235,20 @@
                             <div class="info">
                                 <ul>
                                     <li>기본형 홈페이지 리뉴얼</li>
-                                    <li>사용프로그램 Html css Photoshop</p>
+                                    <li>사용프로그램</li>
+                                    <p>Html, css, Photoshop</p>
                                     <li>참여도</li>
                                     <p>- 기획 : 100%</p>
                                     <p>- 디자인 : 100%</p>
                                     <p>- 퍼블리싱 : 100%</p>
                                 </ul>
                                 <nav>
-                                    <li><a href="img/롬앤 기획안.pdf">프로세스</a></li>
-                                    <li><a href="https://rlaalswl9264.github.io/romand/">웹페이지</a></li>
+                                    <a href="sub/romand/pdf/프로토타입기초데이터수집및스케치+제작및사용성테스트.pdf" target="_blank">
+                                        <li>기획안</li>
+                                    </a>
+                                    <a href="https://rlaalswl9264.github.io/romand/" target="_blank">
+                                        <li>웹페이지</li>
+                                    </a>
                                 </nav>
                             </div><!-- .info end -->
                         </div><!-- .item end 2-->
@@ -251,15 +259,24 @@
                             <div class="info">
                                 <ul>
                                     <li>반응형 홈페이지 리뉴얼</li>
-                                    <li>사용프로그램 Html css Photoshop</p>
+                                    <li>사용프로그램</li>
+                                    <p>Html, css, Photoshop, jquery, javascript, figma</p>
                                     <li>참여도</li>
                                     <p>- 기획 : 100%</p>
                                     <p>- 디자인 : 100%</p>
                                     <p>- 퍼블리싱 : 100%</p>
                                 </ul>
                                 <nav>
-                                    <li><a href="https://www.figma.com/file/B0y51eBFgH9VE6PHgMSWi0/%EC%9D%B4%EC%BC%80%EC%95%84-%EC%A0%9C%EC%B6%9C%EC%9A%A9?type=design&node-id=0-1&t=6tWl0JZFS9gszVMZ-0">프로세스</a></li>
-                                    <li><a href="sub/ikea/이케아.html">웹페이지</a></li>
+                                    <a href="sub/ikea/이케아.pdf" target="_blank">
+                                        <li>기획안</li>
+                                    </a>
+                                    <a href="https://www.figma.com/file/B0y51eBFgH9VE6PHgMSWi0/%EC%9D%B4%EC%BC%80%EC%95%84-%EC%A0%9C%EC%B6%9C%EC%9A%A9?type=design&node-id=0-1&t=6tWl0JZFS9gszVMZ-0"
+                                        target="_blank">
+                                        <li>피그마</li>
+                                    </a>
+                                    <a href="sub/ikea/이케아.html" target="_blank">
+                                        <li>웹페이지</li>
+                                    </a>
                                 </nav>
                             </div><!-- .info end -->
                         </div><!-- .item end 3-->
@@ -270,15 +287,21 @@
                             <div class="info">
                                 <ul>
                                     <li>반응형 홈페이지 리뉴얼</li>
-                                    <li>사용프로그램 Html css Photoshop</p>
+                                    <li>사용프로그램</li>
+                                    <p>Html, css, Photoshop, jquery, javascript, figma</p>
                                     <li>참여도</li>
                                     <p>- 기획 : 100%</p>
                                     <p>- 디자인 : 100%</p>
                                     <p>- 퍼블리싱 : 100%</p>
                                 </ul>
                                 <nav>
-                                    <li><a href="https://www.figma.com/file/uwIiZLIkzuJvH9tkrdKjO2/%EB%B9%84%EC%97%90%EB%A9%94%EC%A2%85?type=design&node-id=0-1&t=PAjR4E0E3mzAnRL6-0">프로세스</a></li>
-                                    <li><a href="sub/vieetmaison/index.html">웹페이지</a></li>
+                                    <a href="https://www.figma.com/file/uwIiZLIkzuJvH9tkrdKjO2/%EB%B9%84%EC%97%90%EB%A9%94%EC%A2%85?type=design&node-id=0-1&t=PAjR4E0E3mzAnRL6-0"
+                                        target="_blank">
+                                        <li>피그마</li>
+                                    </a>
+                                    <a href="sub/vieetmaison/index.html" target="_blank">
+                                        <li>웹페이지</li>
+                                    </a>
                                 </nav>
                             </div><!-- .info end -->
                         </div><!-- .item end 4-->
@@ -288,13 +311,16 @@
                             </figure>
                             <div class="info">
                                 <ul>
-                                    <li>홈페이지 모작</li>
-                                    <li>사용프로그램 Html css</p>
+                                    <li>반응형 홈페이지 모작</li>
+                                    <li>사용프로그램</li>
+                                    <p>Html, css, jquery, javascript</p>
                                     <li>참여도</li>
                                     <p>- 퍼블리싱 : 100%</p>
                                 </ul>
                                 <nav>
-                                    <li><a href="sub/unitech/html/index.html">웹페이지</a></li>
+                                    <a href="sub/unitech/html/index.html" target="_blank">
+                                        <li>웹페이지</li>
+                                    </a>
                                 </nav>
                             </div><!-- .info end -->
                         </div><!-- .item end 5-->
@@ -302,7 +328,7 @@
 
                     </div><!-- .list end -->
                 </div><!-- .all end -->
-                <div class="other">
+                <div class="other" id="mb">
                     <div class="left">
                         <figure>
                             <p>
@@ -318,15 +344,22 @@
                             <div class="info">
                                 <ul>
                                     <li>모바일 앱 리디자인</li>
-                                    <li>사용프로그램 Html css Photoshop</p>
+                                    <li>사용프로그램</li>
+                                    <p>Html, css, Photoshop, jquery, javascript, figma</p>
                                     <li>참여도</li>
                                     <p>- 기획 : 100%</p>
                                     <p>- 디자인 : 100%</p>
                                     <p>- 퍼블리싱 : 100%</p>
                                 </ul>
                                 <nav>
-                                    <li><a href="https://www.figma.com/file/SsSVdID6ic9Jb30ANOiMOb/%ED%94%84%EB%A6%B0%ED%8A%B8%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC?type=design&node-id=0-1&t=CnxzJvP3cKV2RfKm-0">프로세스</a></li>
-                                    <li><a href="sub/print bakery/html/프린트베이커리.html">웹페이지</a></li>
+                                    <a href="https://www.figma.com/file/SsSVdID6ic9Jb30ANOiMOb/%ED%94%84%EB%A6%B0%ED%8A%B8%EB%B2%A0%EC%9D%B4%EC%BB%A4%EB%A6%AC?type=design&node-id=0-1&t=CnxzJvP3cKV2RfKm-0"
+                                        target="_blank">
+                                        <li>피그마</li>
+                                    </a>
+
+                                    <a href="sub/print bakery/html/프린트베이커리.html" target="_blank">
+                                        <li>웹페이지</li>
+                                    </a>
                                 </nav>
                             </div><!-- .info end -->
                         </div><!-- .item end 6-->
@@ -338,14 +371,21 @@
                             <div class="info">
                                 <ul>
                                     <li>모바일 앱 리디자인</li>
-                                    <li>사용프로그램 Html css Photoshop</p>
+                                    <li>사용프로그램</li>
+                                    <p>figma, Photoshop</p>
                                     <li>참여도</li>
                                     <p>- 기획 : 100%</p>
                                     <p>- 디자인 : 100%</p>
                                 </ul>
                                 <nav>
-                                    <li><a href="https://www.figma.com/file/DnfAk6GHXPAihiyT2YgGMw/%EB%9F%AC%EC%89%AC?type=design&node-id=0-1&t=S27hYo2jqPLwNjkG-0">프로세스</a></li>
-                                    <li><a href="sub/lush/">웹페이지</a></li>
+                                    <a href="sub/lush/김민지_스마트문화앱UX설계 + 스마트문화앱UI디자인.pdf" target="_blank">
+                                        <li>기획안</li>
+                                    </a>
+                                    <a href="https://www.figma.com/file/DnfAk6GHXPAihiyT2YgGMw/%EB%9F%AC%EC%89%AC?type=design&node-id=0-1&t=S27hYo2jqPLwNjkG-0"
+                                        target="_blank">
+                                        <li>피그마</li>
+                                    </a>
+
                                 </nav>
                             </div><!-- .info end -->
                         </div><!-- .item end 7-->
@@ -357,15 +397,21 @@
                             <div class="info">
                                 <ul>
                                     <li>모바일 앱 리디자인</li>
-                                    <li>사용프로그램 Html css Photoshop</p>
+                                    <li>사용프로그램</li>
+                                    <p>Html, css, Photoshop, jquery, javascript, figma</p>
                                     <li>참여도</li>
                                     <p>- 기획 : 100%</p>
                                     <p>- 디자인 : 100%</p>
                                     <p>- 퍼블리싱 : 100%</p>
                                 </ul>
                                 <nav>
-                                    <li><a href="https://www.figma.com/file/8dXCu2egzdQQS8QeB1rPFn/%EB%A7%88%EB%85%80%EA%B3%B5%EC%9E%A5-%EB%AA%A8%EB%B0%94%EC%9D%BC?type=design&node-id=0-1&t=yEMVjoLJSX4wf88e-0">프로세스</a></li>
-                                    <li><a href="sub/manyo/html/index.html">웹페이지</a></li>
+                                    <a href="https://www.figma.com/file/8dXCu2egzdQQS8QeB1rPFn/%EB%A7%88%EB%85%80%EA%B3%B5%EC%9E%A5-%EB%AA%A8%EB%B0%94%EC%9D%BC?type=design&node-id=0-1&t=yEMVjoLJSX4wf88e-0"
+                                        target="_blank">
+                                        <li>프로세스</li>
+                                    </a>
+                                    <a href="sub/manyo/html/index.html" target="_blank">
+                                        <li>웹페이지</li>
+                                    </a>
                                 </nav>
                             </div><!-- .info end -->
                         </div><!-- .item end 8-->
@@ -394,53 +440,65 @@
                                     <p>illustrator</p>
                                 </li><!-- .item 2 -->
                                 <li class="carouselTicker__item">
-                                    <a href="img/부산관광.jpg" class="glist">
-                                        <img src="img/부산관광.jpg" alt="이미지3" />
+                                    <a href="sub/일러스트 디자인/네일.jpg" class="glist">
+                                        <img src="sub/일러스트 디자인/네일.jpg" alt="이미지3" />
                                     </a>
-                                    <p>photoshop</p>
+                                    <p>illustrator</p>
                                 </li><!-- .item 3 -->
                                 <li class="carouselTicker__item">
-                                    <a href="img/제주도2인-왕복항공권.png" class="glist">
-                                        <img src="img/제주도2인-왕복항공권.png" alt="이미지4" />
+                                    <a href="sub/일러스트 디자인/포스터.gif" class="glist">
+                                        <img src="sub/일러스트 디자인/포스터.gif" alt="이미지4" />
                                     </a>
-                                    <p>photoshop</p>
+                                    <p>illustrator</p>
                                 </li><!-- .item 4 -->
                                 <li class="carouselTicker__item">
-                                    <a href="img/글램핑장.jpg" class="glist">
-                                        <img src="img/글램핑장.jpg" alt="이미지5" />
+                                    <a href="img/부산관광.jpg" class="glist">
+                                        <img src="img/부산관광.jpg" alt="이미지5" />
                                     </a>
                                     <p>photoshop</p>
                                 </li><!-- .item 5 -->
                                 <li class="carouselTicker__item">
-                                    <a href="img/홍콩여행.jpg" class="glist">
-                                        <img src="img/홍콩여행.jpg" alt="이미지6" />
+                                    <a href="img/제주도2인-왕복항공권.png" class="glist">
+                                        <img src="img/제주도2인-왕복항공권.png" alt="이미지6" />
                                     </a>
                                     <p>photoshop</p>
                                 </li><!-- .item 6 -->
                                 <li class="carouselTicker__item">
-                                    <a href="img/코오롱스포츠.png" class="glist">
-                                        <img src="img/코오롱스포츠.png" alt="이미지7" />
+                                    <a href="img/글램핑장.jpg" class="glist">
+                                        <img src="img/글램핑장.jpg" alt="이미지7" />
                                     </a>
                                     <p>photoshop</p>
                                 </li><!-- .item 7 -->
                                 <li class="carouselTicker__item">
-                                    <a href="img/인스타디자인.jpg" class="glist">
-                                        <img src="img/인스타디자인.jpg" alt="이미지8" />
+                                    <a href="img/홍콩여행.jpg" class="glist">
+                                        <img src="img/홍콩여행.jpg" alt="이미지8" />
+                                    </a>
+                                    <p>photoshop</p>
+                                </li><!-- .item 8 -->
+                                <li class="carouselTicker__item">
+                                    <a href="img/코오롱스포츠.png" class="glist">
+                                        <img src="img/코오롱스포츠.png" alt="이미지9" />
                                     </a>
                                     <p>photoshop</p>
                                 </li><!-- .item 9 -->
                                 <li class="carouselTicker__item">
-                                    <a href="img/버블크림폼.jpg" class="glist">
-                                        <img src="img/버블크림폼.jpg" alt="이미지9" />
+                                    <a href="img/인스타디자인.jpg" class="glist">
+                                        <img src="img/인스타디자인.jpg" alt="이미지10" />
                                     </a>
                                     <p>photoshop</p>
                                 </li><!-- .item 10 -->
                                 <li class="carouselTicker__item">
-                                    <a href="img/카페-이띠.jpg" class="glist">
-                                        <img src="img/카페-이띠.jpg" alt="이미지10" />
+                                    <a href="img/버블크림폼.jpg" class="glist">
+                                        <img src="img/버블크림폼.jpg" alt="이미지11" />
                                     </a>
                                     <p>photoshop</p>
                                 </li><!-- .item 11 -->
+                                <li class="carouselTicker__item">
+                                    <a href="img/카페-이띠.jpg" class="glist">
+                                        <img src="img/카페-이띠.jpg" alt="이미지12" />
+                                    </a>
+                                    <p>photoshop</p>
+                                </li><!-- .item 12 -->
                             </ul>
                         </div>
 
@@ -450,13 +508,24 @@
         </section><!-- .Graphic end -->
 
         <section class="footer" id="ct">
-            <p>“ 시간 내어 제 작품들을 봐 주셔서 감사합니다.
-                저에 대해 궁금하신 사항이 있다면 언제든지 연락주세요.
-                감사합니다. ”</p>
-            <!-- 큐알 넣기 -->
-            <p>Copyright 2023. Webdesigner 김민지. All Rights Reserved.</p>
-            <p>본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로 제작되었습니다.
-                사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝힙니다.</p>
+            <div class="inner">
+                <div class="f_left">
+                    <p>“ 시간 내어 제 작품들을 봐 주셔서 감사합니다.<br />
+                        저에 대해 궁금하신 사항이 있다면 언제든지 연락주세요.<br />
+                        감사합니다. ”</p>
+                    <!-- 큐알 넣기 -->
+                </div><!-- f_left end -->
+                <div class="f_right">
+                    <a href="sub/김민지 입사지원서.hwp">
+                        <img src="img/포폴-로고.png" alt="포트폴리오 로고 이미지" />
+                        <b>이력서 click</b>
+                    </a>
+                </div><!-- .f_right end -->
+                <span>Copyright 2023. Webdesigner 김민지. <br />
+                    All Rights Reserved.
+                    본 사이트는 상업적 목적이 아닌 개인 포트폴리오 사이트로 제작되었습니다.</br>
+                    사용된 일부 이미지 및 폰트 등은 별도의 출처가 있음을 밝힙니다.</span>
+            </div><!-- .inner end -->
         </section><!-- .footer.end -->
 
     </header>
