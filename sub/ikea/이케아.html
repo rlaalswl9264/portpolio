@@ -54,26 +54,58 @@
             });
 
 
+       
+       
+            let bodyTag = document.getElementsByTagName('body')[0];
+            let menuOpen = document.getElementsByClassName('menu_open')[0];
+            let menuClose = document.getElementsByClassName('menu_close')[0];
+            let hdMenu = document.getElementsByClassName('menu')[0];
 
-        })
-        window.onload = function () {
+            let depth01 = $('.depth01>a')
+
+           
+            depth01.click(function(){
+                $(this).next().slideToggle()
+            })
+            
+            menuOpen.onclick = function () {
+                hdMenu.style.display == 'none'
+                hdMenu.style.display = 'block'
+
+                bodyTag.classList.add('body_bg');
+            }
+            menuClose.onclick = function () {
+                hdMenu.style.display == 'block'
+                hdMenu.style.display = 'none'
+
+                bodyTag.classList.remove('body_bg')
+                
+            }
+
+            
+          
+                
+            
+     
+
+        window.onscroll = function () {
+            let scrollBar = window.scrollY;
             let icon = document.getElementsByClassName('icon')[0];
             let iconimg = icon.getElementsByTagName('div');
-
-            window.onscroll = function () {
-                let scrollBar = window.scrollY;
-                console.log(icon.offsetTop)
-                console.log(scrollBar)
-                for (let i = 0; i < iconimg.length; i++) {
-                    if (icon.offsetTop / 2 < scrollBar) {
-                        iconimg[i].classList.add('on' + i);
-                    } else {
-                        iconimg[i].classList.remove('on' + i);
-                    }
+            console.log(icon.offsetTop)
+            console.log(scrollBar)
+            hdMenu.style.display = 'none';
+            for (let i = 0; i < iconimg.length; i++) {
+                if (icon.offsetTop / 2 < scrollBar) {
+                    iconimg[i].classList.add('on' + i);
+                } else {
+                    iconimg[i].classList.remove('on' + i);
                 }
             }
 
         }
+        
+    })
     </script>
 </head>
 
@@ -90,10 +122,89 @@
             <nav>
                 <li><a href="#"><img src="img/🦆 icon _heart_.png" /></a></li>
                 <li><a href="#"><img src="img/🦆 icon _user_.png" /></a></li>
-                <li><a href="#"><img src="img/🦆 icon _menu_.png" /></a></li>
+                <div class="menu_open">
+                    <li><a href="#"><img src="img/🦆 icon _menu_.png" /></a></li>
+                </div><!-- .menu_open end -->
             </nav>
+
+            <section class="menu">
+                <figure>
+                    <img src="img/메뉴배경1.jpg" alt="" />
+                </figure>
+
+                <nav>
+                    <div class="menu_close">
+                        <img src="img/close.png" alt="닫기 버튼" />
+                    </div><!-- .menu_close end -->
+
+                    <div class="menu_all">
+                        <h1>
+                            <a href="#"><img src="img/이케아 로고.svg"></a>
+                        </h1>
+
+                        <div class="menu_right">
+                            <li class="depth01">
+                                <a href="#">제품</a>
+                                <ul class="depth02">
+                                    <li><a href="#">침실</a></li>
+                                    <li><a href="#">거실</a></li>
+                                    <li><a href="#">주방</a></li>
+                                    <li><a href="#">다이닝</a></li>
+                                    <li><a href="#">수납/정리</a></li>
+                                    <li><a href="#">홈오피스</a></li>
+                                    <li><a href="#">특별한 가격</a></li>
+                                    <li><a href="#">현관</a></li>
+                                    <li><a href="#">욕실</a></li>
+                                    <li><a href="#">세탁실</a></li>
+                                    <li><a href="#">어린이 이케아</a></li>
+                                    <li><a href="#">베란다/야외공간</a></li>
+                                    <li><a href="#">홈데코/장식품</a></li>
+                                </ul><!-- .depth02 end -->
+                            </li><!-- depth01 end 1-->
+
+                            <li class="depth01">
+                                <a href="#">온라인 쇼룸</a>
+                                <ul class="depth02">
+                                    <li><a href="#">침실</a></li>
+                                    <li><a href="#">거실</a></li>
+                                    <li><a href="#">주방</a></li>
+                                    <li><a href="#">다이닝</a></li>
+                                    <li><a href="#">수납/정리</a></li>
+                                    <li><a href="#">홈오피스</a></li>
+                                    <li><a href="#">특별한 가격</a></li>
+                                    <li><a href="#">현관</a></li>
+                                    <li><a href="#">욕실</a></li>
+                                    <li><a href="#">세탁실</a></li>
+                                    <li><a href="#">어린이 이케아</a></li>
+                                    <li><a href="#">베란다/야외공간</a></li>
+                                    <li><a href="#">홈데코/장식품</a></li>
+                                </ul><!-- .depth02 end -->
+                            </li><!-- .depth01 end 2-->
+
+                            <li class="depth01">
+                                <a href="#">서비스</a>
+                                <ul class="depth02">
+                                    <li><a href="#">배송 서비스</a></li>
+                                    <li><a href="#">전화주문 헤이오더</a></li>
+                                    <li><a href="#">클릭 앤 콘렉트</a></li>
+                                    <li><a href="#">인테리어 디자인 서비스</a></li>
+                                    <li><a href="#">구매상담서비스</a></li>
+                                    <li><a href="#"></a>설치 서비스</li>
+                                    <li><a href="#"></a>조립 서비스</li>
+                                    <li><a href="#"></a>재봉 서비스</li>
+                                    <li><a href="#"></a>바이팩 서비스</li>
+                                    <li><a href="#"></a>주방 서비스</li>
+                                </ul>
+                            </li><!-- .depth01 end 3 -->
+                        </div><!-- .menu_right end -->
+                    </div><!-- menu_all end -->
+                </nav>
+            </section><!-- .menu end -->
         </div><!-- .inner end -->
     </header>
+
+
+
     <section class="cont01">
         <div class="in">
             <div class="text">

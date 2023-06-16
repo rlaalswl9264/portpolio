@@ -122,16 +122,18 @@ header .inner {
 
 header .inner .search {
     display: flex;
-    width: 100%;
+    width: 46rem;
     justify-content: center;
+    margin: 0 auto;
+    position: relative;
 }
 
 header .inner .search img {
     width: 2.5rem;
     height: 2.5rem;
     position: absolute;
-    top: 30px;
-    left: 500px;
+    top: 4%;
+    left: 84%;
 }
 
 /* 고정하는거는 픽셀로 */
@@ -150,6 +152,7 @@ header .inner .search input[type="text"] {
 header .inner nav {
     display: flex;
     align-items: center;
+    justify-content: right;
 }
 
 header .inner nav img {
@@ -158,8 +161,77 @@ header .inner nav img {
 
 header .inner nav li {
     margin-left: 3.4rem;
+    /* display: none; */
+    position: relative;
+   
 }
 
+header .inner .menu {
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+header .inner .menu figure {
+    width: 35%;
+    height: 100%;
+    position: absolute;
+}
+
+header .inner .menu img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+header .inner .menu .menu_close {
+    position: absolute;
+    top: 35px;
+    right: 230px;
+}
+
+header .inner .menu .menu_all {
+    width: 60%;
+}
+
+header .inner .menu .menu_all h1 {
+    position: absolute;
+    top: 35px;
+    left: 230px;
+}
+header .inner .menu .menu_all .menu_right {
+    margin: 30px auto;
+}
+header .inner .menu .menu_all .menu_right .depth01 {
+    margin: 70px 0;
+    font-size: 25px;
+}
+header .inner .menu .menu_all .menu_right .depth01::before {
+    content: '';
+    position: absolute;
+    width: 13%;
+    top: 32px;
+    left: 0;
+    border: 1px solid #333;
+}
+
+header .inner .menu .menu_all .menu_right .depth02 {
+    font-size: 18px;
+    margin: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    display: none;
+}
+header .inner .menu .menu_all .menu_right .depth02 li {
+    margin-bottom: 20px;
+    width: calc(100% / 2);
+    margin-left: 0;
+}
 .cont01 {
     height: 800px;
     width: 100%;
@@ -676,7 +748,50 @@ footer .icon_img img {
     margin-right: 25px;
 }
 
+@media all and (max-width:1500px) {
+
+    .swiper-button-next,
+    .swiper-rtl .swiper-button-prev {
+        right: 10px;
+    }
+
+    .swiper-button-prev,
+    .swiper-rtl .swiper-button-next {
+        left: 10px;
+    }
+}
+
+@media all and (max-width:1400px) {
+    .cont04 .event .swiper-wrapper .swiper-slide b {
+        font-size: 23px;
+    }
+}
+
+@media all and (max-width:1130px) {
+    .cont04 .event .swiper-wrapper .swiper-slide b {
+        font-size: 18px;
+    }
+
+    .cont03 .insta .right .item div {
+        font-size: 1.8rem;
+    }
+}
+
+@media all and (max-width:1080px) {
+    header .inner .search input[type="text"] {
+        width: 40rem;
+    }
+
+    .cont03 .top div a p {
+        font-size: 1.6rem;
+    }
+
+}
+
 @media all and (max-width:960px) {
+    header .inner nav img {
+        width: 25px;
+    }
 
     header .inner .search input[type="text"] {
         font-size: 14px;
@@ -725,32 +840,68 @@ footer .icon_img img {
     .cont04 .event .swiper-wrapper .swiper-slide {
         width: calc(100% / 3 - 40px);
     }
+}
 
-    .swiper-button-next:after,
-    .swiper-rtl .swiper-button-prev:after {
-        position: absolute;
-        right: 60px;
+@media all and (max-width:900px) {
+    .cont03 .insta {
+        display: block;
     }
 
-    .swiper-button-prev:after,
-    .swiper-rtl .swiper-button-next:after {
-        position: absolute;
-        left: 60px;
+    .cont03 .insta .right {
+        width: 100%;
     }
+
+    .cont03 .insta .left {
+        width: 100%;
+    }
+
+    .cont03 .insta:nth-child(3) .left p {
+        text-align: left;
+    }
+
+    .cont04 .event .swiper-wrapper .swiper-slide b {
+
+        font-size: 15px;
+    }
+}
+
+@media all and (max-width:850px) {
+    header .inner .search {
+        display: none;
+    }
+
+    header .inner nav {
+        width: calc(100% - 40px);
+    }
+
+    .cont04 .event .swiper-wrapper .swiper-slide b {
+        word-break: keep-all;
+    }
+
+    footer p {
+        font-size: 12px;
+        word-break: keep-all;
+    }
+
+
+
+}
+
+@media all and (max-width:770px) {
+    footer .up {
+        display: block;
+    }
+
+    footer .up .right {
+        margin-bottom: 30px;
+    }
+
 }
 
 @media all and (max-width:700px) {
     .cont03 .insta {
         flex-wrap: wrap;
         height: 100%;
-    }
-
-    .cont03 .insta .right {
-        width: 48%;
-    }
-
-    .cont03 .insta .left {
-        width: 50%;
     }
 
 }
